@@ -11,7 +11,12 @@
         <li class="nav__item"><a href="" class="nav__link link">Contact</a></li>
       </ul>
     </nav>
-    <button class="burger-btn js-open-menu">
+    <button
+      class="burger-btn js-open-menu"
+      aria-label="Открытие мобильного меню"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
       <svg class="burger-btn__icon">
         <use href="./images/sprite.svg#burger-menu"></use>
       </svg>
@@ -26,9 +31,9 @@
 
   <!-- MOBILE MENU -->
 
-  <div class="mobile-menu js-menu-container">
+  <div class="mobile-menu js-menu-container" id="mobile-menu">
     <div class="container-menu-wrapper">
-      <button class="close-btn js-close-menu">
+      <button class="close-btn js-close-menu" aria-label="Закрытие мобильного меню">
         <svg class="close-btn__icon">
           <use href="./images/sprite.svg#icon-close-window"></use>
         </svg>
