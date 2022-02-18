@@ -54,17 +54,13 @@
     }
   }
 }
-.products-card::after {
-  content: '...';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  color: var(--primaryTextLight);
-}
+
 .products-card__title {
   font-family: var(--secondaryFontFamily);
   color: var(--primaryTextLight);
   text-align: center;
+  position: relative;
+  margin-bottom: 66px;
 
   @include font(20px, 23px, 400, 0.04em);
 
@@ -75,4 +71,14 @@
   @include desktop {
     @include font(30px, 34px, null, 0.04em);
   }
+}
+.products-card__title::after {
+  content: '...';
+  font-size: 36px;
+  position: absolute;
+  color: var(--primaryTextLight);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 45px;
 }
