@@ -66,6 +66,28 @@
     position: relative;
     top: 9%;
 }
+.gallery__item {
+    transform: scale(1);
+   
+}
+@keyframes scales {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+ }
+
+.gallery__item:hover,
+.gallery__item:focus {
+    animation: scales 1000ms ease 0ms;
+    z-index: 2;
+}
+
 
 // Gallery v.2
 
@@ -115,4 +137,10 @@
 .gallery__item-2:nth-child(10) {
     grid-column: 7/8;
     grid-row: 3/5;
+}
+
+.gallery__item-2:hover,
+.gallery__item-2:focus {
+    animation: scales 1000ms ease 0ms;
+    z-index: 2;
 }
