@@ -17,7 +17,7 @@
 .section-title {
   margin-bottom: 144px;
 }
-.products-list::before {
+.products-card::before {
   content: '';
   position: absolute;
   background-image: url(../images/products/product1.png);
@@ -31,7 +31,7 @@
   margin-bottom: 22px;
 }
 
-.products-list {
+.products-card {
   padding-top: 139px;
   text-align: center;
   background: #ffb8ca;
@@ -55,7 +55,7 @@
   }
 }
 
-.list-title {
+.products-card__title {
   font-family: var(--secondaryFontFamily);
   color: var(--primaryTextLight);
   text-align: center;
