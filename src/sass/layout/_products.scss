@@ -5,11 +5,18 @@
     padding-top: 122px;
     padding-bottom: 112px;
   }
+  @include desktop {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
 }
 .section-title {
   margin-bottom: 144px;
   @include tablet {
     margin-bottom: 150px;
+  }
+  @include desktop {
+    margin-bottom: 259px;
   }
 }
 .products-flex {
@@ -21,6 +28,9 @@
   content: '';
   position: absolute;
   background-image: url(../images/products/product1.png);
+  @include desktop {
+    background-image: url(../images/products/product1@2x.png);
+  }
   background-size: cover;
   background-repeat: no-repeat;
   width: 249px;
@@ -32,6 +42,11 @@
   @include tablet {
     width: 220px;
     height: 226px;
+  }
+  @include desktop {
+    width: 335px;
+    height: 335px;
+    transform: translate(-50%, -63%);
   }
 }
 
@@ -54,16 +69,28 @@
     padding-top: 152px;
     width: 220px;
   }
+  @include desktop {
+    width: 329px;
+    margin-left: 30px;
+    padding-top: 163px;
+    padding-bottom: 50px;
+  }
   &:nth-child(2) {
     background: #f0d1a5;
     &::before {
       background-image: url(../images/products/product2.png);
+      @include desktop {
+        background-image: url(../images/products/product2@2x.png);
+      }
     }
   }
   &:nth-child(3) {
     background: #c2e297;
     &::before {
       background-image: url(../images/products/product3.png);
+      @include desktop {
+        background-image: url(../images/products/product3@2x.png);
+      }
     }
   }
   &:first-child {
@@ -84,7 +111,7 @@
   @include font(20px, 23px, 400, 0.04em);
 
   @include desktop {
-    @include font(30px, 34px, null, 0.04em);
+    @include font(30px, 34px, 400, 0.04em);
   }
 }
 .products-card__title::after {
@@ -100,14 +127,18 @@
   font-family: var(--primaryFontFamily);
   color: var(--primaryTextLight);
   text-align: center;
+  padding: 30px 40px;
   @include font(14px, 21px, 700, 0.04em);
   @include tablet {
     @include font(14px, 25px, 700, 0.04em);
-  }
-
-  padding: 30px 40px;
-  @include tablet {
     padding: 30px 11px;
+  }
+  @include desktop {
+    @include font(16px, 28px, 700, 0.04em);
+    padding-top: 32px;
+    padding-right: 44px;
+    padding-bottom: 62px;
+    padding-left: 44px;
   }
 }
 
