@@ -1,8 +1,12 @@
 .header {
-  padding-top: 6px;
+  // padding-top: 6px;
 
   // Add variable
   background-color: #ffb8ca;
+}
+
+.header__container {
+  padding-top: 6px;
 }
 .header-menu {
   display: flex;
@@ -12,7 +16,7 @@
 .nav__list {
   display: none;
 }
-.main-btn {
+.header__main-btn {
   display: none;
 }
 
@@ -24,7 +28,9 @@
   background-color: transparent;
   cursor: pointer;
   color: var(--primaryBrandColor);
-  &:hover {
+  transition: color 500ms var(--timingFunction);
+  &:hover,
+  &:focus {
     color: #e18298;
   }
 }
@@ -43,7 +49,7 @@
   top: 14px;
   cursor: pointer;
   color: var(--primaryTextLight);
-
+  transition: color 500ms var(--timingFunction);
   &:hover,
   &:focus {
     color: #ffb8ca;
@@ -57,7 +63,7 @@
   fill: currentColor;
 }
 
-.main-btn--menu {
+.mobile-menu__main-btn {
   display: block;
   margin-bottom: 19px;
   margin-left: auto;
@@ -131,7 +137,7 @@
   @include font(14px, 18px, 700, 0.03em);
 
   color: var(--primaryTextLight);
-
+  transition: color 500ms var(--timingFunction);
   &:hover,
   &:focus {
     color: var(--primaryBrandColor);
@@ -139,13 +145,16 @@
 }
 
 @include tablet {
-  .main-btn {
+  .header__container {
+    padding-top: 37px;
+  }
+  .header__main-btn {
     display: block;
     min-width: 160px;
     margin-left: 30px;
   }
 
-  .main-btn--menu {
+  .mobile-menu__main-btn {
     min-width: 186px;
     margin-left: auto;
   }
@@ -156,9 +165,14 @@
 }
 
 @include desktop {
-  .container {
-    width: 1119px;
+  .header__container {
+    // width: 1119px;
+    // padding-left: 0;
+
+    width: 1188px;
+    // padding-top: 37px;
     padding-left: 0;
+    padding-right: 69px;
   }
   .burger-btn {
     display: none;
@@ -169,7 +183,7 @@
   }
   .nav__list {
     display: flex;
-    margin-left: 110px;
+    // margin-left: 110px;
   }
   .nav__item:not(:last-child) {
     margin-right: 35px;
@@ -178,7 +192,7 @@
   .nav__link {
     @include font(16px, 21px, 700, 0.03em);
     color: var(--primaryTextLight);
-
+    transition: color 500ms var(--timingFunction);
     &:hover,
     &:focus {
       color: var(--primaryBrandColor);
