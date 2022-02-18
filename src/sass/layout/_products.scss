@@ -1,6 +1,7 @@
 .products {
   padding-top: 121px;
   padding-bottom: 98px;
+
   @include tablet {
     padding-top: 122px;
     padding-bottom: 112px;
@@ -79,7 +80,7 @@
     background: #f0d1a5;
     &::before {
       background-image: url(../images/products/product2.png);
-      @include desktop {
+      @include tablet {
         background-image: url(../images/products/product2@2x.png);
       }
     }
@@ -88,7 +89,7 @@
     background: #c2e297;
     &::before {
       background-image: url(../images/products/product3.png);
-      @include desktop {
+      @include tablet {
         background-image: url(../images/products/product3@2x.png);
       }
     }
