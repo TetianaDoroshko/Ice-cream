@@ -1,9 +1,21 @@
 .products {
   padding-top: 121px;
   padding-bottom: 98px;
+  @include tablet {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
 }
 .section-title {
   margin-bottom: 144px;
+  @include tablet {
+    margin-bottom: 150px;
+  }
+}
+.products-flex {
+  @include tablet {
+    @include flex;
+  }
 }
 .products-card::before {
   content: '';
@@ -16,30 +28,48 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -46%);
+
+  @include tablet {
+    width: 220px;
+    height: 226px;
+  }
 }
 
 .products-card {
   display: block;
+  border-radius: 24px;
+  text-align: center;
+
   padding-top: 161px;
+  padding-bottom: 40px;
+
   text-align: center;
   background: #ffb8ca;
-  margin-top: 31px;
-  border-radius: 24px;
-  min-height: 480px;
-  padding-bottom: 41px;
   position: relative;
+
+  margin-top: 130px;
+  @include tablet {
+    margin-top: 0px;
+    margin-left: 20px;
+    padding-top: 152px;
+    width: 220px;
+  }
   &:nth-child(2) {
     background: #f0d1a5;
-    margin-top: 130px;
     &::before {
       background-image: url(../images/products/product2.png);
     }
   }
   &:nth-child(3) {
     background: #c2e297;
-    margin-top: 130px;
     &::before {
       background-image: url(../images/products/product3.png);
+    }
+  }
+  &:first-child {
+    margin-top: 0px;
+    @include tablet {
+      margin-left: 0px;
     }
   }
 }
@@ -49,13 +79,9 @@
   color: var(--primaryTextLight);
   text-align: center;
   position: relative;
-  margin-bottom: 66px;
+  margin-bottom: 36px;
 
   @include font(20px, 23px, 400, 0.04em);
-
-  @include tablet {
-    @include font(26px, 30px);
-  }
 
   @include desktop {
     @include font(30px, 34px, null, 0.04em);
@@ -75,7 +101,14 @@
   color: var(--primaryTextLight);
   text-align: center;
   @include font(14px, 21px, 700, 0.04em);
-  margin: 30px 40px;
+  @include tablet {
+    @include font(14px, 25px, 700, 0.04em);
+  }
+
+  padding: 30px 40px;
+  @include tablet {
+    padding: 30px 11px;
+  }
 }
 
 .extra-text {
@@ -83,15 +116,12 @@
 }
 #read-icecream:checked ~ .extra-text {
   display: block;
-  margin-bottom: 30px;
 }
 #read-icecoffee:checked ~ .extra-text {
   display: block;
-  margin-bottom: 30px;
 }
 #read-milkshakes:checked ~ .extra-text {
   display: block;
-  margin-bottom: 30px;
 }
 
 .products_read-more {
