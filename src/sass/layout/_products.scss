@@ -29,9 +29,6 @@
   left: 50%;
   transform: translate(-50%, -46%);
   margin-bottom: 22px;
-  &:nth-child(2) {
-    background-image: url(../images/products/product2.png);
-  }
 }
 
 .products-list {
@@ -45,10 +42,16 @@
   &:nth-child(2) {
     background: #f0d1a5;
     margin-top: 130px;
+    &::before {
+      background-image: url(../images/products/product2.png);
+    }
   }
   &:nth-child(3) {
     background: #c2e297;
     margin-top: 129px;
+    &::before {
+      background-image: url(../images/products/product3.png);
+    }
   }
 }
 
