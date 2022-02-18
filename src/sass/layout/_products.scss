@@ -41,6 +41,7 @@
   transform: translate(-50%, -46%);
 
   @include tablet {
+    background-size: 100%;
     width: 220px;
     height: 226px;
   }
