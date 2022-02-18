@@ -3,7 +3,7 @@
     padding-top: 121px;
     padding-bottom: 98px;
   }
-
+  
   @include tablet {
     width: 740px;
   }
@@ -11,6 +11,12 @@
   @include desktop {
     width: 1090px;
   }
+}
+.products-list::before {
+  content: '';
+  background-image: url(../images/products/home-pic1@2xmob.jpg);
+  width: 249px;
+  height: 252px;
 }
 .products-list {
   text-align: center;
