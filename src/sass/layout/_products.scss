@@ -1,18 +1,6 @@
 .products {
   padding-top: 121px;
   padding-bottom: 98px;
-
-  @include mobile {
-    width: 480px;
-    margin: 0 auto;
-  }
-  @include tablet {
-    width: 740px;
-  }
-
-  @include desktop {
-    width: 1090px;
-  }
 }
 .section-title {
   margin-bottom: 144px;
@@ -28,12 +16,11 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -46%);
-  margin-bottom: 22px;
 }
 
 .products-card {
   display: block;
-  padding-top: 151px;
+  padding-top: 161px;
   text-align: center;
   background: #ffb8ca;
   margin-top: 31px;
@@ -50,7 +37,7 @@
   }
   &:nth-child(3) {
     background: #c2e297;
-    margin-top: 129px;
+    margin-top: 130px;
     &::before {
       background-image: url(../images/products/product3.png);
     }
@@ -79,7 +66,6 @@
   font-size: 36px;
   position: absolute;
   color: var(--primaryTextLight);
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 45px;
