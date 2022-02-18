@@ -32,7 +32,7 @@
 }
 
 .products-card {
-  padding-top: 139px;
+  padding-top: 151px;
   text-align: center;
   background: #ffb8ca;
   margin-top: 31px;
@@ -54,11 +54,18 @@
     }
   }
 }
-
+.products-card::after {
+  content: '...';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  color: var(--primaryTextLight);
+}
 .products-card__title {
   font-family: var(--secondaryFontFamily);
   color: var(--primaryTextLight);
   text-align: center;
+
   @include font(20px, 23px, 400, 0.04em);
 
   @include tablet {
