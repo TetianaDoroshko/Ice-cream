@@ -1,10 +1,72 @@
-<header>
-  Header
+<header class="container header">
+  <div class="header-menu">
+    <nav class="nav">
+      <a href="" class="logo"
+        ><img class="logo__img" src="./images/logo.png" alt="Company's Logo"
+      /></a>
 
-  <button type="button" class="main-btn main-btn--light">
-    Buy now
-    <svg class="main-btn__icon" width="8" height="10">
-      <use href="./images/sprite.svg#arrow-main-btn"></use>
-    </svg>
-  </button>
+      <ul class="nav__list list">
+        <li class="nav__item"><a href="./index.html" class="nav__link link">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link link">About us</a></li>
+        <li class="nav__item"><a href="#how-it-made" class="nav__link link">How it’s made?</a></li>
+        <li class="nav__item"><a href="#product" class="nav__link link">Our products</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-wrapper">
+      <button
+        class="burger-btn js-open-menu"
+        aria-label="Открытие мобильного меню"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="burger-btn__icon">
+          <use href="./images/sprite.svg#burger-menu"></use>
+        </svg>
+      </button>
+      <button type="button" class="main-btn main-btn--light">
+        Buy now
+        <svg class="main-btn__icon" width="8" height="10">
+          <use href="./images/sprite.svg#arrow-main-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+
+  <div class="mobile-menu js-menu-container" id="mobile-menu">
+    <div class="container-menu-wrapper">
+      <button class="close-btn js-close-menu" aria-label="Закрытие мобильного меню">
+        <svg class="close-btn__icon">
+          <use href="./images/sprite.svg#icon-close-window"></use>
+        </svg>
+      </button>
+
+      <button type="button" class="main-btn main-btn--light main-btn--menu">
+        Buy now
+        <svg class="main-btn__icon" width="8" height="10">
+          <use href="./images/sprite.svg#arrow-main-btn"></use>
+        </svg>
+      </button>
+
+      <ul class="list mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__link link">Home</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#about" class="mobile-menu__link link">About us</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#how-it-made" class="mobile-menu__link link">How it’s made?</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#product" class="mobile-menu__link link">Our products</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#contact" class="mobile-menu__link link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
