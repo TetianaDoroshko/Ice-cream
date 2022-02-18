@@ -1,5 +1,12 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--secondaryBgColor);
+}
+
 .footer-text {
-  padding-bottom: 17px;
+  max-width: 232px;
+  margin-bottom: 43px;
   font-family: var(--secondaryFontFamily);
   @include font(18px, 21px, 400);
   text-transform: uppercase;
@@ -9,6 +16,8 @@
 }
 
 .footer-text__span {
+  display: block;
+  margin-top: 17px;
   @include font(34px, 39px, 400);
   letter-spacing: 0.04em;
   color: var(--primaryBrandColor);
@@ -16,6 +25,7 @@
 
 .footer-list {
   @include flex(flex, null, flex-end);
+  margin-bottom: 46px;
 }
 
 .footer-item {
@@ -34,6 +44,7 @@
 }
 
 .address {
+  margin-bottom: 43px;
   @include font(12px, 22px, 700);
   font-style: normal;
   text-align: right;
@@ -49,6 +60,7 @@
 }
 
 .footer-text__rights {
+  padding-top: 22px;
   @include font(14px, 21px, 700);
   text-align: center;
   color: var(--secondaryTextColor);
