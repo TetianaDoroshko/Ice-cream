@@ -1,0 +1,43 @@
+.products {
+  @media screen and (min-width: 320px) {
+    padding-top: 121px;
+    padding-bottom: 98px;
+  }
+
+  @include tablet {
+    width: 740px;
+  }
+
+  @include desktop {
+    width: 1090px;
+  }
+}
+.products-list {
+  text-align: center;
+  background: #ffb8ca;
+  margin-top: 31px;
+  border-radius: 24px;
+  &:nth-child(2) {
+    background: #f0d1a5;
+    margin-top: 17px;
+  }
+  &:nth-child(3) {
+    background: #c2e297;
+    margin-top: 16px;
+  }
+}
+
+.list-title {
+  font-family: var(--secondaryFontFamily);
+  color: var(--primaryTextLight);
+  text-align: center;
+  @include font(20px, 23px, 400, 0.04em);
+
+  @include tablet {
+    @include font(26px, 30px);
+  }
+
+  @include desktop {
+    @include font(30px, 34px, null, 0.04em);
+  }
+}
