@@ -1,0 +1,27 @@
+.advantages-list_item {
+  width: 230px;
+  height: 156px;
+}
+
+.advantages-list_text {
+  @include font(12px, 20px, 700);
+  font-family: var(----primaryFontFamily);
+
+  color: var(--primaryTextDark);
+}
+
+.advantages-list_text--accent {
+  @include font(36px, 41px, 400, 0.04);
+  display: block;
+  font-family: var(--secondaryFontFamily);
+  text-transform: uppercase;
+
+  color: var(--primaryBrandColor);
+}
+.advantages-list_item::before {
+  content: '';
+  display: inline-block;
+  width: 33px;
+  height: 55px;
+  background-image: url(../images/advantages/advantages1.png);
+}
