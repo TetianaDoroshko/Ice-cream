@@ -1,9 +1,11 @@
 .products {
-  @media screen and (min-width: 320px) {
-    padding-top: 121px;
-    padding-bottom: 98px;
+  padding-top: 121px;
+  padding-bottom: 98px;
+
+  @include mobile {
+    width: 480px;
+    margin: 0 auto;
   }
-  
   @include tablet {
     width: 740px;
   }
@@ -14,10 +16,11 @@
 }
 .products-list::before {
   content: '';
-  background-image: url(../images/products/home-pic1@2xmob.jpg);
+  background-image: url(../images/products/home-pic2xmob.jpg);
   width: 249px;
   height: 252px;
 }
+
 .products-list {
   text-align: center;
   background: #ffb8ca;
