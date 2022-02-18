@@ -1,0 +1,68 @@
+.hero-section{
+    background-color: #FFB8CA;
+    height: 502px;
+    @include mobile{
+        height: 502px;
+    }
+    @include tablet{
+        height: 399px;
+    }
+    @include desktop{
+        height: 665px;
+    }
+}
+
+.hero__upper-container{
+    display: flex;
+}
+
+.page-title{
+    @include font( 26px, 30px, null, 0.04em );
+    color: var(--primaryTextLight);
+    font-family: "Titan One", cursive;
+    text-transform: uppercase;
+    width: 218px;
+    height: 106px;
+    @include mobile{
+        @include font( 26px, 30px, null, 0.04em );
+        width: 218px;
+        height: 106px;
+    }
+    @include tablet{
+        @include font( 22px, 25px, null, 0.04em );
+        width: 162px;
+        height: 80px;  
+    }
+    @include desktop{
+        @include font( 38px, 44px, null, 0.04em );
+        width: 277px;
+        height: 137px;  
+    }
+}
+
+.hero__buttons{
+    display: flex;
+}
+
+.hero-buttons__part{
+    &:not(:last-child){
+        margin-right: 8px;
+    }
+    @include desktop{
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+    }
+}
+
+.hero__girl-pickture{
+    display: none;
+}
+
+.hero__icecream-pickture{
+    display: none;
+}
+
+.hero__milk-pickture{
+    display: none;
+}
