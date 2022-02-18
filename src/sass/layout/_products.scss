@@ -32,12 +32,14 @@
 }
 
 .products-card {
+  display: block;
   padding-top: 151px;
   text-align: center;
   background: #ffb8ca;
   margin-top: 31px;
   border-radius: 24px;
-  height: 480px;
+  min-height: 480px;
+  padding-bottom: 41px;
   position: relative;
   &:nth-child(2) {
     background: #f0d1a5;
@@ -88,4 +90,48 @@
   text-align: center;
   @include font(14px, 21px, 700, 0.04em);
   margin: 30px 40px;
+}
+
+.extra-text {
+  display: none;
+}
+#read-icecream:checked ~ .extra-text {
+  display: block;
+  margin-bottom: 30px;
+}
+#read-icecoffee:checked ~ .extra-text {
+  display: block;
+  margin-bottom: 30px;
+}
+#read-milkshakes:checked ~ .extra-text {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.products_read-more {
+  width: 12px;
+  height: 12px;
+  fill: var(--primaryBrandColor);
+  transition: fill 250ms var(--timingFunction), transform 250ms var(--timingFunction);
+}
+.read-icecream,
+.read-icecoffee,
+.read-milkshakes {
+  background-color: var(--primaryTextLight);
+  padding: 9.8px 14.5px;
+  border-radius: 50%;
+
+  transition: background-color 250ms var(--timingFunction), transform 250ms var(--timingFunction);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primaryBrandColor);
+    transform: scale(1.1) rotate(360deg);
+  }
+  &:hover svg,
+  &:focus svg {
+    background-color: var(--primaryBrandColor);
+    fill: var(--primaryTextLight);
+    transform: scale(1.1) rotate(360deg);
+  }
 }
