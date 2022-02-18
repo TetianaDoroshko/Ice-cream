@@ -1,8 +1,12 @@
 .header {
-  padding-top: 6px;
+  // padding-top: 6px;
 
   // Add variable
   background-color: #ffb8ca;
+}
+
+.header__container {
+  padding-top: 6px;
 }
 .header-menu {
   display: flex;
@@ -12,7 +16,7 @@
 .nav__list {
   display: none;
 }
-.main-btn {
+.header__main-btn {
   display: none;
 }
 
@@ -59,7 +63,7 @@
   fill: currentColor;
 }
 
-.main-btn--menu {
+.mobile-menu__main-btn {
   display: block;
   margin-bottom: 19px;
   margin-left: auto;
@@ -141,13 +145,16 @@
 }
 
 @include tablet {
-  .main-btn {
+  .header__container {
+    padding-top: 37px;
+  }
+  .header__main-btn {
     display: block;
     min-width: 160px;
     margin-left: 30px;
   }
 
-  .main-btn--menu {
+  .mobile-menu__main-btn {
     min-width: 186px;
     margin-left: auto;
   }
@@ -158,9 +165,14 @@
 }
 
 @include desktop {
-  .container {
-    width: 1119px;
+  .header__container {
+    // width: 1119px;
+    // padding-left: 0;
+
+    width: 1188px;
+    // padding-top: 37px;
     padding-left: 0;
+    padding-right: 69px;
   }
   .burger-btn {
     display: none;
