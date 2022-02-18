@@ -82,3 +82,10 @@
   transform: translate(-50%, -50%);
   top: 45px;
 }
+.products-card__content {
+  font-family: var(--primaryFontFamily);
+  color: var(--primaryTextLight);
+  text-align: center;
+  @include font(14px, 21px, 700, 0.04em);
+  margin: 30px 40px;
+}
