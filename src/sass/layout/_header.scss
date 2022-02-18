@@ -6,6 +6,7 @@
 }
 .header-menu {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .nav__list {
@@ -15,15 +16,24 @@
   display: none;
 }
 
+.header-wrapper {
+  display: flex;
+  align-items: center;
+}
 .burger-btn {
   background-color: transparent;
   cursor: pointer;
+  color: var(--primaryBrandColor);
+  &:hover {
+    color: #e18298;
+  }
 }
 
 .burger-btn__icon {
   width: 25px;
   height: 21px;
-  fill: var(--primaryBrandColor);
+  // fill: var(--primaryBrandColor);
+  fill: currentColor;
 }
 
 .close-btn {
@@ -52,8 +62,12 @@
   //   width: 100%;
   //   height: 100%;
   position: fixed;
+  z-index: 100;
   top: 0;
   right: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
   // align-items: center;
   padding-top: 60px;
   // padding-left: 20px;
@@ -61,6 +75,16 @@
   background-color: #e17992;
   width: 250px;
   height: 100vh;
+  transform: translateX(100%);
+  transition: opacity 1000ms var(--timingFunction), visibility 1000ms var(--timingFunction),
+    transform 1000ms var(--timingFunction);
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
 }
 
 .container-menu-wrapper {
@@ -98,4 +122,57 @@
   align-items: center;
 
   color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: var(--primaryBrandColor);
+  }
+}
+
+@include tablet {
+  .main-btn {
+    display: block;
+    min-width: 160px;
+    margin-left: 30px;
+  }
+
+  .main-btn--menu {
+    min-width: 186px;
+    margin-left: auto;
+  }
+
+  .mobile-menu {
+    width: 40vw;
+  }
+}
+
+@include desktop {
+  .container {
+    width: 1119px;
+    padding-left: 0;
+  }
+  .burger-btn {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav__list {
+    display: flex;
+    margin-left: 110px;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  .nav__link {
+    @include font(16px, 21px, 700, 0.03em);
+    color: var(--primaryTextLight);
+
+    &:hover,
+    &:focus {
+      color: var(--primaryBrandColor);
+    }
+  }
 }
