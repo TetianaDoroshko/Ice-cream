@@ -24,7 +24,9 @@
   background-color: transparent;
   cursor: pointer;
   color: var(--primaryBrandColor);
-  &:hover {
+  transition: color 500ms var(--timingFunction);
+  &:hover,
+  &:focus {
     color: #e18298;
   }
 }
@@ -43,7 +45,7 @@
   top: 14px;
   cursor: pointer;
   color: var(--primaryTextLight);
-
+  transition: color 500ms var(--timingFunction);
   &:hover,
   &:focus {
     color: #ffb8ca;
@@ -131,7 +133,7 @@
   @include font(14px, 18px, 700, 0.03em);
 
   color: var(--primaryTextLight);
-
+  transition: color 500ms var(--timingFunction);
   &:hover,
   &:focus {
     color: var(--primaryBrandColor);
@@ -178,7 +180,7 @@
   .nav__link {
     @include font(16px, 21px, 700, 0.03em);
     color: var(--primaryTextLight);
-
+    transition: color 500ms var(--timingFunction);
     &:hover,
     &:focus {
       color: var(--primaryBrandColor);
