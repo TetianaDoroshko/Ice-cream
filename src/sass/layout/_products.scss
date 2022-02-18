@@ -14,25 +14,41 @@
     width: 1090px;
   }
 }
+.section-title {
+  margin-bottom: 144px;
+}
 .products-list::before {
   content: '';
-  background-image: url(../images/products/home-pic2xmob.jpg);
+  position: absolute;
+  background-image: url(../images/products/product1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 249px;
   height: 252px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  margin-bottom: 22px;
+  &:nth-child(2) {
+    background-image: url(../images/products/product2.png);
+  }
 }
 
 .products-list {
+  padding-top: 139px;
   text-align: center;
   background: #ffb8ca;
   margin-top: 31px;
   border-radius: 24px;
+  height: 480px;
+  position: relative;
   &:nth-child(2) {
     background: #f0d1a5;
-    margin-top: 17px;
+    margin-top: 130px;
   }
   &:nth-child(3) {
     background: #c2e297;
-    margin-top: 16px;
+    margin-top: 129px;
   }
 }
 
