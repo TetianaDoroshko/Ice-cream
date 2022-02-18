@@ -28,7 +28,7 @@
   background-color: transparent;
   cursor: pointer;
   color: var(--primaryBrandColor);
-  transition: color 500ms var(--timingFunction);
+  transition: color 250ms var(--timingFunction);
   &:hover,
   &:focus {
     color: #e18298;
@@ -49,7 +49,7 @@
   top: 14px;
   cursor: pointer;
   color: var(--primaryTextLight);
-  transition: color 500ms var(--timingFunction);
+  transition: color 250ms var(--timingFunction);
   &:hover,
   &:focus {
     color: #ffb8ca;
@@ -80,17 +80,19 @@
   right: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow-y: scroll;
   transform: translateX(100%);
   // align-items: center;
   padding-top: 60px;
   // padding-left: 20px;
   // padding-right: 20px;
+  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   background-color: #e17992;
   width: 250px;
   height: 100vh;
   transform: translateX(100%);
-  transition: opacity 1000ms var(--timingFunction), visibility 1000ms var(--timingFunction),
-    transform 1000ms var(--timingFunction);
+  transition: opacity 250ms var(--timingFunction), visibility 250ms var(--timingFunction),
+    transform 250ms var(--timingFunction);
 
   &.is-open {
     opacity: 1;
@@ -137,7 +139,7 @@
   @include font(14px, 18px, 700, 0.03em);
 
   color: var(--primaryTextLight);
-  transition: color 500ms var(--timingFunction);
+  transition: color 250ms var(--timingFunction);
   &:hover,
   &:focus {
     color: var(--primaryBrandColor);
@@ -174,6 +176,10 @@
     padding-left: 0;
     padding-right: 69px;
   }
+
+  .header__main-btn {
+    margin-left: 0;
+  }
   .burger-btn {
     display: none;
   }
@@ -192,7 +198,7 @@
   .nav__link {
     @include font(16px, 21px, 700, 0.03em);
     color: var(--primaryTextLight);
-    transition: color 500ms var(--timingFunction);
+    transition: color 250ms var(--timingFunction);
     &:hover,
     &:focus {
       color: var(--primaryBrandColor);
