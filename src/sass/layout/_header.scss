@@ -42,12 +42,19 @@
   right: 18px;
   top: 14px;
   cursor: pointer;
+  color: var(--primaryTextLight);
+
+  &:hover,
+  &:focus {
+    color: #ffb8ca;
+  }
 }
 
 .close-btn__icon {
   width: 30px;
   height: 30px;
-  fill: var(--primaryTextLight);
+  // fill: var(--primaryTextLight);
+  fill: currentColor;
 }
 
 .main-btn--menu {
@@ -114,14 +121,16 @@
 }
 
 .mobile-menu__link {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
+  // font-family: DM Sans;
+  // font-style: normal;
+  // font-weight: bold;
+  // font-size: 14px;
+  // line-height: 18px;
   align-items: center;
 
-  color: #ffffff;
+  @include font(14px, 18px, 700, 0.03em);
+
+  color: var(--primaryTextLight);
 
   &:hover,
   &:focus {
