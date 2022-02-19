@@ -31,29 +31,17 @@
 }
 
 .about__pre-title {
-  @include font(18px, 21px, 400, 0.04em);
-
-  @include tablet {
-    @include font(26px, 30px);
-  }
-  @include desktop {
-    @include font(30px, 34px);
+  @media screen and (max-width: 767px) {
+    margin: 0 auto 15px auto;
+    width: 200px;
   }
 }
 
 .about__title {
-  @include font(34px, 39px, 400, 0.06em);
-
-  @include tablet {
-    @include font(48px, 55px);
-    width: 100%;
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    width: 200px;
   }
-  @include desktop {
-    @include font(50px, 66px);
-  }
-  margin: 0 auto;
-
-  width: 200px;
 }
 .about__wrapper {
   @include tablet {
