@@ -23,10 +23,14 @@
     text-transform: uppercase;
     width: 218px;
     height: 106px;
+    position: relative;
+    margin-top: 137px;
+    z-index: 2;
     @include mobile{
         @include font( 26px, 30px, null, 0.04em );
         width: 218px;
         height: 106px;
+
     }
     @include tablet{
         @include font( 22px, 25px, null, 0.04em );
@@ -40,11 +44,20 @@
     }
 }
 
-.hero__buttons{
-    display: flex;
+.header__passion{
+    @include font( 44px, 46px, bold, 0.04em );
+    color: #D41443;
 }
 
-.hero-buttons__part{
+.hero__ancors{
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 318px;
+    z-index: 2;
+}
+
+.hero-ancors__part{
     &:not(:last-child){
         margin-right: 8px;
     }
@@ -60,9 +73,81 @@
 }
 
 .hero__icecream-pickture{
-    display: none;
+    position: absolute;
+    top: 92px;
+    left: 117px;
+    z-index: 1;
+    @include mobile{
+        
+    }
+}
+
+.hero-common__icecream{
+    height: 410px;
+    width: 171px;
 }
 
 .hero__milk-pickture{
     display: none;
+}
+
+.hero-cafes__list{
+    display: none;
+    @include tablet{
+
+    }
+    @include desktop{
+
+    }
+}
+
+.hero-text{
+    display: none;
+    @include tablet{
+
+    }
+    @include desktop{
+
+    }
+}
+
+.hero__circle{
+    border-radius: 50%;
+    background-color: #FFA5BA;
+    position: absolute;
+    top: 83px;
+    left: 36px;
+    width: 346px;
+    height: 344px;
+}
+
+.btn-arrow{
+    display: none;
+}
+
+.hero-ancor{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    line-height: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.product__ancor{
+    width: 62.4px;
+    height: 24px;
+    color: var(--primaryTextLight);
+    background-color: #D41443;
+}
+
+.him__ancor{
+    width: 82.8px;
+    height: 24px;
+    color: var(--primaryTextLight);
+    background-color: var(--primaryTextLight);
+    color: #D41443;
 }
