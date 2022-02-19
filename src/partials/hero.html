@@ -2,6 +2,15 @@
   <div class="hero-container container">
   <div class="hero__upper-container">
   <h1 class="page-title hero__title">ice cream made with <span class="header__passion">passion</span></h1>
+  <ul class="hero-ancors-list list hero__ancors">
+    <li class="hero-ancors__part">
+      <a href="" class="hero-ancor product__ancor">Products</a>
+    </li>
+    <li class="hero-ancors__part">
+      <a href="" class="hero-ancor him__ancor">How it`s made</a>
+    </li>
+  </ul>
+  </div>
   <ul class="cafes-list list hero-cafes__list">
     <li class="cafes-list__part">
       <p class="cafes-list__text"><span class="cafes-list__number">16</span> cafes</p>
@@ -12,84 +21,25 @@
         <div class="cafes-list__ellipse"></div>
     </li>
   </ul>
-  </div>
-  <ul class="hero-ancors-list list hero__ancors">
-    <li class="hero-ancors__part">
-      <a href="" class="hero-ancor product__ancor">Products</a>
-    </li>
-    <li class="hero-ancors__part">
-      <a href="" class="hero-ancor him__ancor">How it`s made</a>
-    </li>
-  </ul>
   <p class="hero-text hero__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-  <picture class="hero__icecream-pickture">
-    <source
-      srcset=" ../src/images/hero/ice-cream.png 1x, ../src/images/hero/ice-cream@2x.png 2x "
-      media="(min-width: 1280px)"
-    />
-    <source
-      srcset=" ../src/images/hero/ice-cream.png 1x, ../src/images/hero/ice-cream@2x.png 2x "
-      media="(min-width: 768px)"
-    />
-    <source
-      srcset=" ../src/images/hero/ice-cream.png 1x, ../src/images/hero/ice-cream@2x.png 2x "
-      media="(max-width: 767px)"
-    />
-    <img
-      class="hero-common__icecream"
-      src="../src/images/hero/ice-cream.png"
-      loading="lazy"
-      alt="Рожок"
-      title="Айскрим"
-      width="171"
-      height="410"
-    />
-  </picture>
-  <picture class="hero__girl-pickture">
-    <source
-      srcset=" ../src/images/hero/girl.png 1x, ../src/images/hero/girl@2x.png 2x "
-      media="(min-width: 1280px)"
-    />
-    <source
-      srcset=" ../src/images/hero/girl.png 1x, ../src/images/hero/girl@2x.png 2x "
-      media="(min-width: 768px)"
-    />
-    <source
-      srcset=" ../src/images/hero/girl.png 1x, ../src/images/hero/girl@2x.png 2x "
-      media="(max-width: 767px)"
-    />
-    <img
-      src="../src/images/hero/girl.png"
-      loading="lazy"
-      alt="Рожок"
-      title="Айскрим"
-      width="168"
-      height="133"
-    />
-  </picture>
-  <picture class="hero__milk-pickture">
-    <source
-      srcset=" ../src/images/hero/milk.png 1x, ../src/images/hero/milk@2x.png 2x "
-      media="(min-width: 1280px)"
-    />
-    <source
-      srcset=" ../src/images/hero/milk.png 1x, ../src/images/hero/milk@2x.png 2x "
-      media="(min-width: 768px)"
-    />
-    <source
-      srcset=" ../src/images/hero/milk.png 1x, ../src/images/hero/milk@2x.png 2x "
-      media="(max-width: 767px)"
-    />
-    <img
-      src="../src/images/hero/milk.png"
-      loading="lazy"
-      alt="Рожок"
-      title="Айскрим"
-      width="124"
-      height="126"
-    />
-  </picture>
+  <div class="icecream__container">
+    <img class="hero__icecream-pickture"
+      srcset="./images/hero/ice-cream.png 1x,
+      ./images/hero/ice-cream@2x.png 2x" 
+      src="./images/hero/ice-cream.png"
+      alt="Icecream">
   <div class="hero__circle"></div>
+  </div>
+  <img class="hero__girl-pickture"
+      srcset="./images/hero/girl.png 1x,
+      ./images/hero/girl@2x.png 2x" 
+      src="./images/hero/girl.png"
+      alt="Girl">
+      <img class="hero__milk-pickture"
+      srcset="./images/hero/milk.png 1x,
+      ./images/hero/milk@2x.png 2x" 
+      src="./images/hero/milk.png"
+      alt="milk">
   <button class="btn-arrow" type="button">
     <svg class="btn-arrow__icon" width="12" height="12">
       <use href="./images/sprite.svg#arrow-right"></use>
