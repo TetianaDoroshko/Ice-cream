@@ -1,25 +1,29 @@
-<section class="contact-section">
+<section class="contacts">
   <div class="container">
     <h2 class="visually-hidden">Contacts</h2>
-    <ul class="list contacts">
+    <ul class="list contacts__list">
       <li class="contacts__item">        
         <p class="contacts__title">CAFE</p>
           
             <p class="contacts__location">Chicago</p>
             <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
-          
-        <div class="contacts__open-time">
-          <p class="contacts__open-time__days border-before">Monday - Friday</p>
-          <p class="contacts__open-time__hours contacts__open-time--margin">06:00 AM - 10:00 PM</p>
-          <p class="contacts__open-time__days">Saturday - Sunday</p>
-          <p class="contacts__open-time__hours border-after">08:00 AM - 16:00 PM</p>
-        </div>
-        <address>
+                 
+        <ul class="list contacts__time-list">
+          <li class="contacts__time-item">
+             <p class="contacts__open-time-days">Monday - Friday</p>
+             <p class="contacts__open-time-hours">06:00 AM - 10:00 PM</p>
+          </li>
+          <li class="contacts__time-item">
+            <p class="contacts__open-time-days">Saturday - Sunday</p>
+           <p class="contacts__open-time-hours">08:00 AM - 16:00 PM</p>
+          </li>
+        </ul>
+        
           <ul class="list">
             <li><a class="link contacts__link" href="">+61(0) 383 766 284</a></li>
             <li><a class="link contacts__link" href="">noreply@envato.com</a></li>
           </ul>          
-        </address>
+        
       </li>
       <li class="contacts__item">        
         <p class="contacts__title contacts__color-title">FOOD TRUCK</p>
@@ -27,18 +31,22 @@
             <p class="contacts__location">Los Angeles</p>
             <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
           
-        <div class="contacts__open-time">
-          <p class="contacts__open-time__days border-before">Monday - Friday</p>
-          <p class="contacts__open-time__hours contacts__open-time--margin">06:00 AM - 10:00 PM</p>
-          <p class="contacts__open-time__days">Saturday - Sunday</p>
-          <p class="contacts__open-time__hours border-after">08:00 AM - 16:00 PM</p>
-        </div>
-        <address>
+            <ul class="list contacts__time-list">
+              <li class="contacts__time-item">
+                 <p class="contacts__open-time-days">Monday - Friday</p>
+                 <p class="contacts__open-time-hours">06:00 AM - 10:00 PM</p>
+              </li>
+              <li class="contacts__time-item">
+                <p class="contacts__open-time-days">Saturday - Sunday</p>
+               <p class="contacts__open-time-hours">08:00 AM - 16:00 PM</p>
+              </li>
+            </ul>
+        
           <ul class="list">
             <li><a class="link contacts__link" href="">+61(0) 383 766 284</a></li>
             <li><a class="link contacts__link" href="">noreply@envato.com</a></li>
           </ul>          
-        </address>
+        
       </li>
       <li class="contacts__item">        
         <p class="contacts__title">CAFE</p>
@@ -46,33 +54,42 @@
             <p class="contacts__location">New York</p>
             <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
           
-        <div class="contacts__open-time">
-          <p class="contacts__open-time__days border-before">Monday - Friday</p>
-          <p class="contacts__open-time__hours contacts__open-time--margin">06:00 AM - 10:00 PM</p>
-          <p class="contacts__open-time__days">Saturday - Sunday</p>
-          <p class="contacts__open-time__hours border-after">08:00 AM - 16:00 PM</p>
-        </div>
-        <address>
+            <ul class="list contacts__time-list">
+              <li class="contacts__time-item">
+                 <p class="contacts__open-time-days">Monday - Friday</p>
+                 <p class="contacts__open-time-hours">06:00 AM - 10:00 PM</p>
+              </li>
+              <li class="contacts__time-item">
+                <p class="contacts__open-time-days">Saturday - Sunday</p>
+               <p class="contacts__open-time-hours">08:00 AM - 16:00 PM</p>
+              </li>
+            </ul>
+        
           <ul class="list">
             <li><a class="link contacts__link" href="">+61(0) 383 766 284</a></li>
             <li><a class="link contacts__link" href="">noreply@envato.com</a></li>
-          </ul>          
-        </address>
+          </ul>
+          
       </li>
     </ul>
-
-    <button type="button" class="main-btn main-btn--dark">
-      Our Locations
-      <svg class="main-btn__icon" width="8" height="10">
-        <use href="./images/sprite.svg#arrow-main-btn"></use>
-      </svg>
-    </button>
-
-    <button type="button" class="main-btn main-btn--light">
-      Franchise
-      <svg class="main-btn__icon" width="8" height="10">
-        <use href="./images/sprite.svg#arrow-main-btn"></use>
-      </svg>
-    </button>
+    <ul class="list contacts__buttons">
+        <li class="contacts__buttons-item">
+             <button type="button" class="main-btn main-btn--dark">
+              Our Locations
+            <svg class="main-btn__icon" width="8" height="10">
+              <use href="./images/sprite.svg#arrow-main-btn"></use>
+            </svg>
+            </button>
+        </li>
+        <li>
+          <button type="button" class="main-btn main-btn--light">
+                  Franchise
+            <svg class="main-btn__icon" width="8" height="10">
+              <use href="./images/sprite.svg#arrow-main-btn"></use>
+            </svg>
+          </button>
+         </li>
+    </ul>     
+    
   </div>
 </section>

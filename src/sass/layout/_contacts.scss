@@ -1,108 +1,196 @@
-.contact-section {    
-    background:#FFF5F6;    
+.contacts {  
+    background:#FFF5F6; 
+    top: 86px; 
+    //padding-top: 86px;
+    padding-bottom: 63px;    
+    @include tablet {           
+        top: 132px;  
+       //padding-top: 132px;   
+        padding-bottom: 115px; 
+    }
+
+    @include desktop {
+    background-image: url(../images/contacts/contacts-bg.png);      
+    background-repeat: no-repeat;
+    max-width: 1300px;
+    margin: 0 auto;
+    }  
+          
 }
-.contacts {
-    display: flex;    
+
+
+
+.contacts__list {
+         
+    position: relative;
+    margin-top: -20px;
+    top: -88px;    
+    @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    margin: -10px;  
+    top: -88px;    
+    }
+
+    @include desktop {
+    margin: -15px;
+    top: -117px;    
+    }
 }
-.contacts__item {            
-    position: relative;    
-    width: 330px;
-    height: 572px;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px; 
-    padding: 51px 43px;  
-    &:not(last-child){
-     margin-left: 31px;   
-    }   
+
+.contacts__buttons {
+    //margin-top: 54px;
+    text-align: center;
     
+    @include tablet {
+    @include flex(flex, center, center);
+    //margin-top: 81px;
+    }
+    
+    @include desktop {
+    //margin-top: 86px;
+    }
+}
+
+.contacts__buttons-item {    
+    margin-bottom: 10px; 
+    @include tablet{
+      margin-right: 15px;
+      margin-bottom: 0;  
+    }
+}
+
+.contacts__item {    
+    padding: 43px 20px;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: #ffffff;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    
+    @include tablet {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    padding: 50px 31px;
+    }
+    @include desktop {
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
+    padding: 51px 43px;
+    }
 }
 
 .contacts__title {
     text-transform: uppercase;  
     display: inline-block;
+    @include font(12px,22px,500,0.04em);  
     padding: 0 20px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.86; 
-    text-align: center;
-    letter-spacing: 0.04em;
+    text-align: center;    
     color: #FFFFFF;    
     background: #F0D1A5;
     border-radius: 6px; 
-    margin-bottom: 32px;
-    
+    margin-bottom: 25px;
+    @include tablet { 
+        @include font(16px,30px,500,0.04em);       
+        margin-bottom: 30px; 
+    } 
+    @include desktop{
+        @include font(16px,30px,500,0.04em);
+        margin-bottom: 32px; 
+    }     
 }
 
 .contacts__color-title {
     background: #C2E297;
 }
 .contacts__location {
-    @include font(16px,(30/16,2),500,0.04em);
-}
-.contacts__location{
+    @include font(12px,22px,500,0.04em);
     margin-bottom: 10px;
+    @include tablet{
+        @include font(14px,26px,500,0.04em);
+        margin-bottom: 14px;
+    }
+    @include desktop{
+        @include font(16px,30px,500,0.04em);
+        margin-bottom: 10px; 
+    } 
 }
 
-.contacts__text {
-    @include font(16px,(29/16,2),500,0.04em);    
+.contacts__text {    
+    @include font(12px,18px,500,0.04em);   
     color: #907E82;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
+    @include tablet{
+        @include font(14px,23px,500,0.04em);
+        margin-bottom: 30px;
+    } 
+    @include desktop{
+        @include font(16px,29px,500,0.04em);
+        margin-bottom: 32px; 
+    } 
 }
 
-.contacts__open-time {
-    padding: 32px 0px;
-    margin-bottom: 32px;
+.contacts__time-list {
+    padding: 25px 0px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
+    @include tablet {
+        padding: 30px 0px; 
+        margin-bottom: 30px;       
+    }   
+    @include desktop{        
+        padding: 32px 0px;
+        margin-bottom: 32px; 
+    } 
 }
 
-.contacts__open-time__days {
-    @include font(16px,(30/16,2),500,0.04em);
-    line-height: 28px;
+
+.contacts__open-time-days {
+    @include font(12px,22px,500,0.04em); 
+    @include tablet{
+        @include font(14px,26px,500,0.04em);
+    }    
+    @include desktop{        
+        @include font(16px,30px,500,0.04em); 
+    } 
 }
 
-.contacts__open-time__hours{
-    @include font(16px,(30/16,2),500,0.04em);
-    line-height: 28px;
+.contacts__open-time-hours{
+    @include font(12px,22px,500,null);       
     color: #FFA5BA;
+    @include tablet{
+        @include font(14px,23px,500,null);        
+    } 
+    @include desktop{        
+        @include font(16px,30px,500,null);  
+    } 
 }
 
-.contacts__open-time--margin{
-    margin-bottom: 15px;
+.contacts__time-item {
+    &:not(:last-child) {
+    margin-bottom: 10px;
+        @include tablet{
+        margin-bottom: 16px;       
+        } 
+        @include desktop{        
+        margin-bottom: 15px;
+        } 
+    }
 }
 
 .contacts__link {
-    @include font(16px,(29/16,2),500,0.04em);
+    @include font(12px,18px,500,null);
     color: #907E82;
-    font-style: normal;
-    line-height: 28px;
-}
-
-.border-before {
-    position: relative;  
-    &::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    border-radius: 1px;    
-    background-color:#E1E1E1;
-    position: absolute;
-    left: 0;
-    top: -32px;    
-    }    
-}
-
-.border-after{
-    position: relative;  
-    &::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    border-radius: 1px;    
-    background-color: #E1E1E1;
-    position: absolute;
-    left: 0;
-    bottom: -32px;    
-    }
+    @include tablet{
+        @include font(14px,26px,500,null);
+    }   
+    @include desktop{        
+        @include font(16px,30px,500,null);
+    }       
 }
 
 
