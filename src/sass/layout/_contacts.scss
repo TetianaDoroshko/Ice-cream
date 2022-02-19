@@ -1,28 +1,43 @@
 .contacts {    
     background:#FFF5F6;  
-    padding: 115px 0px;
+    padding-top: 86px;
+    padding-bottom: 63px;
+
+    @include tablet{     
+        padding-top: 132px;   
+        padding-bottom: 115px; 
+    }
+
 }
+
 .contacts__list {
-    @include flex(flex,center,center);
-    flex-direction: column;
-    padding-bottom: 54px; 
-    @include tablet{flex-direction:initial; }
-
-    @include desktop{        
-    padding-bottom: 86px; 
+    margin-top: -20px;    
+    @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    margin: -10px;      
     }
-         
+
+    @include desktop {
+    margin: -15px;   
+    }
 }
 
-.contacts__buttons{
-    @include flex(flex,center,center);
-    flex-direction: column;
-    @include tablet{
-        flex-direction:initial; 
+.contacts__buttons {
+    margin-top: 54px;
+    text-align: center;
+    
+    @include tablet {
+    @include flex(flex, center, center);
+    margin-top: 81px;
     }
-          
+    
+    @include desktop {
+    margin-top: 86px;
+    }
 }
-.contacts__buttons__item{
+
+.contacts__buttons-item {
     
     margin-bottom: 10px; 
     @include tablet{
@@ -31,34 +46,28 @@
     }
 }
 
-.contacts__item {            
-     
+.contacts__item {
     padding: 43px 20px;
     width: 220px;
-    height: 427px;   
-    background: #FFFFFF;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: #ffffff;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;     
-    margin-bottom: 20px;
-    @include tablet{
-        width: 220px;
-        height: 544px;
-        padding: 50px 31px;
-        &:not(:last-child) {
-            margin-right: 20px;
-            }  
-    }  
-    @include desktop{ 
-        width: 330px;
-        height: 572px; 
-        padding: 51px 43px;       
-        &:not(:last-child) {
-        margin-right: 30px;
-        }    
+    border-radius: 24px;
+    
+    @include tablet {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    padding: 50px 31px;
     }
-    
-    
-}
+    @include desktop {
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
+    padding: 51px 43px;
+    }
+    }
 
 .contacts__title {
     text-transform: uppercase;  
@@ -111,12 +120,12 @@
     } 
 }
 
-.contacts__open-time {
+.contacts__time-list {
     padding: 25px 0px;
     margin-bottom: 25px;
     border-bottom: 1px solid #E1E1E1;
     border-top: 1px solid #E1E1E1;
-    @include tablet{
+    @include tablet {
         padding: 30px 0px; 
         margin-bottom: 30px;       
     }   
@@ -127,7 +136,7 @@
 }
 
 
-.contacts__open-time__days {
+.contacts__open-time-days {
     @include font(12px,22px,500,0.04em); 
     @include tablet{
         @include font(14px,26px,500,0.04em);
@@ -137,7 +146,7 @@
     } 
 }
 
-.contacts__open-time__hours{
+.contacts__open-time-hours{
     @include font(12px,22px,500,null);       
     color: #FFA5BA;
     @include tablet{
@@ -148,14 +157,16 @@
     } 
 }
 
-.contacts__open-time--margin{
+.contacts__time-item {
+    &:not(:last-child) {
     margin-bottom: 10px;
-    @include tablet{
+        @include tablet{
         margin-bottom: 16px;       
-    } 
-    @include desktop{        
+        } 
+        @include desktop{        
         margin-bottom: 15px;
-    } 
+        } 
+    }
 }
 
 .contacts__link {
