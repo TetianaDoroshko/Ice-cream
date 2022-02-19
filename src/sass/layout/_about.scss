@@ -1,16 +1,36 @@
 .about {
+  background-image: url(./../images/about/about-bg-left.png),
+    url(./../images/about/about-bg-right.png);
+  background-size: calc((100% - 50px) / 2);
+  background-position: 0% 90%, 100% 90%;
+  background-repeat: no-repeat;
   background-color: #fff5f6;
-  position: relative;
+
   padding-top: 125px;
   @include tablet {
     padding-top: 130px;
+    background-image: none;
   }
   @include desktop {
+    background-image: url(./../images/about/about-bg-left.png),
+      url(./../images/about/about-bg-right.png);
+    background-size: calc((100% - 50px) / 2);
+    background-position: 0% 100%, 100% 100%;
+
     padding-top: 125px;
   }
+  /*
+  background-image: url(./../images/about/about-bg-left.png),
+    url(./../images/about/about-bg-right.png);
+  background-size: contain;
+  background-position: 0%, 100%;
+  background-repeat: no-repeat;
+   background: url(./../images/about/about-bg-left.png) 0% 100% no-repeat,
+      url(./../images/about/about-bg-right.png) 100% 100% no-repeat;
+    background-color: #fff5f6;*/
 }
 
-.pre-title {
+.about__pre-title {
   @include font(18px, 21px, 400, 0.04em);
 
   @include tablet {
@@ -21,7 +41,7 @@
   }
 }
 
-.section-title {
+.about__title {
   @include font(34px, 39px, 400, 0.06em);
 
   @include tablet {
@@ -35,44 +55,45 @@
 
   width: 200px;
 }
-.about-container {
-  margin: 0 35px;
+.about__wrapper {
   @include tablet {
     display: flex;
-    margin: 0 auto;
   }
 }
 
-.about-image {
+.about__image {
+  display: block;
+  margin-top: 26px;
   @include tablet {
     margin-top: 50px;
-    max-width: 340px;
+    width: calc((100% - 17px) / 2);
   }
   @include desktop {
     margin-top: 55px;
-    max-width: 100%;
+    width: calc((100% - 74px) / 2);
   }
 }
 
-.about-container__paragraf {
+.about__content--paragraf {
+  padding-left: 30px;
+  padding-right: 30px;
   margin-top: 46px;
   z-index: 1;
   @include tablet {
-    margin-top: 100px;
-    margin-left: 15px;
-
-    width: 340px;
+    width: calc((100% - 17px) / 2);
+    margin-top: 0;
+    margin-left: 17px;
+    padding: 50px 0 0 0;
   }
   @include desktop {
+    width: calc((100% - 74px) / 2);
     margin-left: 74px;
-    width: 463px;
-    margin-top: 106px;
   }
 }
 
-.paragraf-start {
+.about__text-start {
   @include font(12px, 19px, 500, 0.04em);
-  font-family: DM Sans;
+
   margin-bottom: 45px;
 
   @include tablet {
@@ -85,26 +106,25 @@
   }
 }
 
-.paragraf-center {
+.about__text-center {
   @include font(12px, 19px, 500, 0.04em);
-  margin-bottom: 20px;
-  color: #907e82;
+  margin-bottom: 29px;
+  color: var(--secondaryTextColor);
 
   @include tablet {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     @include font(14px, 25px);
   }
   @include desktop {
-    margin-bottom: 35px;
+    margin-bottom: 27px;
     @include font(14px, 27px);
   }
 }
 
-.paragraf-end {
+.about__text-end {
   @include font(12px, 19px, 500, 0.04em);
   margin-bottom: 20px;
-  color: #907e82;
-
+  color: var(--secondaryTextColor);
   @include tablet {
     margin-bottom: 62px;
     @include font(14px, 25px);
@@ -114,7 +134,7 @@
     @include font(14px, 27px);
   }
 }
-
+/*
 .image-milk-left {
   position: absolute;
   bottom: 0;
@@ -126,7 +146,6 @@
     display: block;
     left: 0;
     bottom: 0;
-    
   }
 }
 .image-milk-right {
@@ -141,10 +160,15 @@
     bottom: 0;
   }
 }
-
+*/
 .main-btn {
-  margin-bottom: 40px;
+}
+
+.about__main-btn {
+  min-width: 176px;
+  @include font(14px, 18px, 700, 0.04em);
+
   @include tablet {
-    margin-bottom: 66px;
+    @include font(16px, 21px);
   }
 }
