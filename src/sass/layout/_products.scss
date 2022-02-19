@@ -23,6 +23,7 @@
 .products-flex {
   @include tablet {
     @include flex;
+    align-items: flex-start;
   }
 }
 .products-card::before {
@@ -144,16 +145,18 @@
   }
 }
 
-.extra-text {
+.prod-icecream,
+.prod-icecoffee,
+.prod-milkshakes {
   display: none;
 }
-#read-icecream:checked ~ .extra-text {
+#read-icecream:checked ~ .prod-icecream {
   display: block;
 }
-#read-icecoffee:checked ~ .extra-text {
+#read-icecoffee:checked ~ .prod-icecoffee {
   display: block;
 }
-#read-milkshakes:checked ~ .extra-text {
+#read-milkshakes:checked ~ .prod-milkshakes {
   display: block;
 }
 
