@@ -1,44 +1,58 @@
-.contacts {    
-    background:#FFF5F6;  
-    padding-top: 86px;
-    padding-bottom: 63px;
-
-    @include tablet{     
-        padding-top: 132px;   
+.contacts {  
+    background:#FFF5F6; 
+    top: 86px; 
+    //padding-top: 86px;
+    padding-bottom: 63px;    
+    @include tablet {           
+        top: 132px;  
+       //padding-top: 132px;   
         padding-bottom: 115px; 
     }
 
+    @include desktop {
+    background-image: url(../images/contacts/contacts-bg.png);      
+    background-repeat: no-repeat;
+    max-width: 1300px;
+    margin: 0 auto;
+    }  
+          
 }
 
+
+
 .contacts__list {
-    margin-top: -20px;    
+         
+    position: relative;
+    margin-top: -20px;
+    top: -88px;    
     @include tablet {
     @include flex;
     flex-wrap: wrap;
-    margin: -10px;      
+    margin: -10px;  
+    top: -88px;    
     }
 
     @include desktop {
-    margin: -15px;   
+    margin: -15px;
+    top: -117px;    
     }
 }
 
 .contacts__buttons {
-    margin-top: 54px;
+    //margin-top: 54px;
     text-align: center;
     
     @include tablet {
     @include flex(flex, center, center);
-    margin-top: 81px;
+    //margin-top: 81px;
     }
     
     @include desktop {
-    margin-top: 86px;
+    //margin-top: 86px;
     }
 }
 
-.contacts__buttons-item {
-    
+.contacts__buttons-item {    
     margin-bottom: 10px; 
     @include tablet{
       margin-right: 15px;
@@ -46,7 +60,7 @@
     }
 }
 
-.contacts__item {
+.contacts__item {    
     padding: 43px 20px;
     width: 220px;
     margin-top: 20px;
@@ -67,7 +81,7 @@
     margin: 15px;
     padding: 51px 43px;
     }
-    }
+}
 
 .contacts__title {
     text-transform: uppercase;  
@@ -86,8 +100,7 @@
     @include desktop{
         @include font(16px,30px,500,0.04em);
         margin-bottom: 32px; 
-    } 
-    
+    }     
 }
 
 .contacts__color-title {
