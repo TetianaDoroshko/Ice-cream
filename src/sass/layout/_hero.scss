@@ -20,13 +20,22 @@
     height: 100%;
     align-items: flex-end;
     min-width: 250px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
+    padding-right: 20;
+    padding-left: 20;
     @include tablet{
         padding-top: 94px;
+        align-items: unset;
+        width: 768px;
+        padding-right: 34px;
+        padding-left: 34px;
     }
     @include desktop{
         padding-top: 156px;
+        width: 1280px;
+        padding-right: 77px;
+        padding-left: 77px;
     }
 }
 
@@ -38,6 +47,7 @@
     left: 36px;
     top: 83px;
     @include tablet{
+        display: block;
         left: 287px;
         width: 324px;
         height: 368px;
@@ -58,6 +68,7 @@
     width: 346px;
     height: 344px;
     @include tablet{
+        display: block;
         width: 324px;
         height: 322px;
     }
@@ -107,7 +118,7 @@
         height: 80px;  
     }
     @include desktop{
-        @include font( 38px, 44px, null, 0.04em );
+        @include font( 38px, 44px, null, 0.06em );
         width: 277px;
         height: 137px;  
     }
@@ -116,11 +127,23 @@
 .header__passion{
     @include font( 44px, 46px, bold, 0.04em );
     color: #D41443;
+    @include tablet{
+        @include font( 33px, 35px, bold, 0.04em );
+    }
+    @include desktop{
+        @include font( 53px, 55px, bold, 0.09em );
+    }
 }
 
 .hero__ancors{
         display: flex;
         margin-top: 19px;
+        @include tablet{
+            margin-top: 20px;
+        }
+        @include desktop{
+            margin-top: 25px;
+        }
     }
     
 .hero-ancors__part{
@@ -141,9 +164,13 @@
     align-items: center;
     font-family: "DM Sans", sans-serif;
     font-size: 8px;
-    line-height: 10px;
+    line-height: 1.25;
     border-radius: 20px;
     text-decoration: none;
+    @include desktop{
+        font-size: 14px;
+        line-height: 1.3;
+    }
 }
 
 .product__ancor{
@@ -151,6 +178,10 @@
     height: 24px;
     color: var(--primaryTextLight);
     background-color: #D41443;
+    @include desktop{
+        width: 104px;
+        height: 40px;
+    }
 }
 
 .him__ancor{
@@ -159,6 +190,10 @@
     color: var(--primaryTextLight);
     background-color: var(--primaryTextLight);
     color: #D41443;
+    @include desktop{
+        width: 138px;
+        height: 40px;
+    }
 }
 
 .hero__upper-container{
@@ -167,62 +202,196 @@
     align-items: flex-start;
     position: relative;
     z-index: 2;
-    padding-bottom: 160px;
-}
-
-
-
-
-
-
-.hero__girl-pickture{
-    display: none;
-}
-
-.hero__milk-pickture{
-    display: none;
-}
-
-.hero-text{
-    display: none;
-}
-
-.btn-arrow{
-    display: none;  
+    margin-bottom: 160px;
+    @include tablet{
+        display: flex;
+        height: 124px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    @include desktop{
+        width: 277px;
+        height: 202px;
+        margin-left: 38px;
+    }
 }
 
 .cafes-list{
     display: none;
+    @include tablet{
+        display: block;
+        width: 53px;
+        height: 100px;
+        margin-left: 401px;
+        margin-top: 10px;
+    }
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 92px;
+        height: 171px;
+        margin-left: 596px;
+    }
 }
 
-// .hero__girl-pickture{
-//     display: none;
-// }
+.cafe__part{
+    width: 43px;
+    height: 44px;
+    @include desktop{
+        width: 72px;
+        height: 77px;
+    }
+}
 
-// .hero__milk-pickture{
-//     display: none;
-// }
+.food-truck__part{
+    width: 51px;
+    height: 43px;
+    @include desktop{
+        width: 92px;
+        height: 76px;
+        margin-top: 28px;
+    }
+}
 
-// .hero-cafes__list{
-//     display: none;
-//     @include tablet{
+.cafes-list__number{
+    @include font( 28px, 32px, null, 0.04em );
+    font-family: "Titan One", cursive;
+    color: #D41443;
+    position: relative;
+    z-index: 2;
+    &::after{
+        content: '';
+        background-image: url(../images/hero/hero-ellipse.svg);
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 26px;
+        bottom: 18px;
+        z-index: -1;
+    }
+    @include desktop{
+        @include font( 46px, 53px, null, 0.04em );
+        &::after{
+            background-image: url(../images/hero/hero-ellipse@desktop.svg);
+            width: 30px;
+            height: 30px;
+            left: 42px;
+            bottom: 27px;
+        }
+    }
+}
 
-//     }
-//     @include desktop{
+.cafes-list__text{
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: end;
+    color: var(--primaryTextLight);
+    @include desktop{
+        font-size: 14px;
+        line-height: 1.3;
+        margin-top: 2px;
+    }
+}
 
-//     }
-// }
+.hero__girl-pickture{
+    display: none;
+    @include tablet{
+        display: block;
+        width: 168px;
+        height: 133px;
+        position: absolute;
+        bottom: 0px;
+        right: 34px;
+    }
+    @include desktop{
+        width: 293px;
+        height: 232px;
+        right: 109px;
+    }
+}
 
-// .hero-text{
-//     display: none;
-//     @include tablet{
+.hero__milk-pickture{
+    display: none;
+    @include tablet{
+        display: block;
+        width: 124px;
+        height: 126px;
+        position: absolute;
+        bottom: 28px;
+        left: 20px;
+    }
+    @include desktop{
+        width: 188px;
+        height: 191px;
+        left: 77px;
+        bottom: 45px;
+    }
+}
 
-//     }
-//     @include desktop{
+.hero-text{
+    display: none;
+    @include tablet{
+        display: block;
+        width: 114px;
+        height: 48px;
+        font-family: "DM Sans", sans-serif;
+        font-size: 8px;
+        line-height: 1.5;
+        color: var(--primaryTextLight);
+    }
+    @include desktop{
+        font-size: 14px;
+        line-height: 1.4;
+        width: 200px;
+        height: 78px;
+    }
+}
 
-//     }
-// }
+.btn-arrow{
+    display: none; 
+    @include tablet{
+        display: flex;
+        width: 18px;
+        height: 18px;
+        margin-top: 20px;
+    }
+    @include desktop{
+        width: 26px;
+        height: 26px;
+    }
+}
 
-// .btn-arrow{
-//     display: none;
-// }
+.btn-arrow__icon{
+    width: 8px;
+    height: 8px;
+    @include desktop{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.hero-text__container{
+    display: none;
+    @include tablet{
+        margin-top: 66px;
+        margin-left: 134px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @include desktop{
+        margin-left: 218px;
+        margin-top: 112px;
+    }
+}
+
+.hero__left{
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
