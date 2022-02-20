@@ -22,8 +22,7 @@
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-}
-.reviews__img {
+
   margin-bottom: 29px;
   @include tablet {
     margin-bottom: 19px;
@@ -59,7 +58,7 @@
   &::before {
     content: '';
     display: inline-block;
-    height: 50px;
+    height: 40px;
     width: 54px;
     background-size: contain;
     background: url(../images/reviews/befor_1.png);
@@ -70,8 +69,6 @@
     z-index: 1;
 
     @include tablet {
-      height: 40px;
-      width: 54px;
       left: 40px;
       top: 30px;
     }
@@ -92,12 +89,12 @@
   position: relative;
 
   @include tablet {
-    @include font(14px, 30px, 500, 0.04em);
+    @include font(14px, 30px, null, 0.04em);
     width: 460px;
   }
 
   @include desktop {
-    @include font(16px, 30px, 500, 0.04em);
+    @include font(16px, 30px);
     width: 750px;
   }
 }
