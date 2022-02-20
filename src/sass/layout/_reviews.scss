@@ -21,7 +21,9 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 100%;
+
+  width: 85px;
+  height: 85px;
 
   margin-bottom: 29px;
   @include tablet {
@@ -48,7 +50,6 @@
     padding-top: 47px;
     padding-bottom: 28px;
     width: 620px;
-    background: rgba(250, 250, 250, 0.4);
   }
   @include desktop {
     padding-bottom: 32px;
@@ -103,8 +104,8 @@
   min-height: 245px;
   background-image: repeating-linear-gradient(
     180deg,
-    #fafafa,
-    #fafafa 28px,
+    transparent,
+    transparent 28px,
     #e1e1e1 29px,
     #e1e1e1 30px
   );
@@ -112,13 +113,6 @@
   @include tablet {
     width: 524px;
     min-height: 89px;
-    background-image: repeating-linear-gradient(
-      180deg,
-      rgba(250, 250, 250, 0.4),
-      rgba(250, 250, 250, 0.4) 28px,
-      #e1e1e1 29px,
-      #e1e1e1 30px
-    );
   }
 
   @include desktop {
@@ -130,9 +124,12 @@
 .reviews__name {
   @include font(14px, 26px, 500);
   margin-top: 30px;
-
+  @media screen and (max-width: 768px) {
+    margin-bottom: 42px;
+  }
   @include tablet {
     margin-top: 24px;
+    margin-bottom: 47px;
   }
 
   @include desktop {
@@ -155,20 +152,44 @@
       margin-bottom: 15px;
     }
   }
+}
 
-  &::after {
-    content: '';
-    display: block;
-    height: 12px;
-    width: 73px;
-    background: url(../images/reviews/hr_dots.png);
+// SWIPER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    margin-top: 30px;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-    @include tablet {
-      margin-top: 35px;
-    }
-  }
+  text-align: center;
+  margin: 0 auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+  background-image: url(../images/reviews/house.png);
+  background-size: cover;
+  border-radius: unset;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
