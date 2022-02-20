@@ -1,6 +1,7 @@
 .hero-section{
     background-color: #FFB8CA;
     height: 502px;
+    overflow: hidden;
     @include mobile{
         height: 502px;
     }
@@ -16,6 +17,11 @@
     display: flex;
     padding-top: 83px;
     position: relative;
+    height: 100%;
+    align-items: flex-end;
+    min-width: 250px;
+    margin-right: auto;
+    margin-left: auto;
     @include tablet{
         padding-top: 94px;
     }
@@ -89,9 +95,6 @@
     text-transform: uppercase;
     width: 218px;
     height: 106px;
-    position: relative;
-    padding-top: 110px;
-    z-index: 2;
     @include mobile{
         @include font( 26px, 30px, null, 0.04em );
         width: 218px;
@@ -115,6 +118,58 @@
     color: #D41443;
 }
 
+.hero__ancors{
+        display: flex;
+        margin-top: 19px;
+    }
+    
+.hero-ancors__part{
+    &:not(:last-child){
+        margin-right: 8px;
+    }
+    @include desktop{
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+    }
+}
+
+.hero-ancor{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    line-height: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.product__ancor{
+    width: 62.4px;
+    height: 24px;
+    color: var(--primaryTextLight);
+    background-color: #D41443;
+}
+
+.him__ancor{
+    width: 82.8px;
+    height: 24px;
+    color: var(--primaryTextLight);
+    background-color: var(--primaryTextLight);
+    color: #D41443;
+}
+
+.hero__upper-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 160px;
+}
+
 
 
 
@@ -125,10 +180,6 @@
 }
 
 .hero__milk-pickture{
-    display: none;
-}
-
-.hero__ancors{
     display: none;
 }
 
@@ -144,75 +195,8 @@
     display: none;
 }
 
-// .page-title{
-//     @include font( 26px, 30px, null, 0.04em );
-//     color: var(--primaryTextLight);
-//     font-family: "Titan One", cursive;
-//     text-transform: uppercase;
-//     width: 218px;
-//     height: 106px;
-//     position: relative;
-//     margin-top: 137px;
-//     z-index: 2;
-//     @include mobile{
-//         @include font( 26px, 30px, null, 0.04em );
-//         width: 218px;
-//         height: 106px;
-
-//     }
-//     @include tablet{
-//         @include font( 22px, 25px, null, 0.04em );
-//         width: 162px;
-//         height: 80px;  
-//     }
-//     @include desktop{
-//         @include font( 38px, 44px, null, 0.04em );
-//         width: 277px;
-//         height: 137px;  
-//     }
-// }
-
-// .header__passion{
-//     @include font( 44px, 46px, bold, 0.04em );
-//     color: #D41443;
-// }
-
-// .hero__ancors{
-//     display: flex;
-//     position: absolute;
-//     left: 20px;
-//     top: 318px;
-//     z-index: 2;
-// }
-
-// .hero-ancors__part{
-//     &:not(:last-child){
-//         margin-right: 8px;
-//     }
-//     @include desktop{
-//         &:not(:last-child){
-//             margin-right: 15px;
-//         }
-//     }
-// }
-
 // .hero__girl-pickture{
 //     display: none;
-// }
-
-// .hero__icecream-pickture{
-//     position: absolute;
-//     top: 92px;
-//     left: 117px;
-//     z-index: 1;
-//     @include mobile{
-        
-//     }
-// }
-
-// .hero-common__icecream{
-//     height: 410px;
-//     width: 171px;
 // }
 
 // .hero__milk-pickture{
@@ -239,43 +223,6 @@
 //     }
 // }
 
-// .hero__circle{
-//     border-radius: 50%;
-//     background-color: #FFA5BA;
-//     position: absolute;
-//     top: 83px;
-//     left: 36px;
-//     width: 346px;
-//     height: 344px;
-// }
-
 // .btn-arrow{
 //     display: none;
-// }
-
-// .hero-ancor{
-//     display: flex;
-//     text-align: center;
-//     justify-content: center;
-//     align-items: center;
-//     font-family: "DM Sans", sans-serif;
-//     font-size: 8px;
-//     line-height: 10px;
-//     border-radius: 20px;
-//     text-decoration: none;
-// }
-
-// .product__ancor{
-//     width: 62.4px;
-//     height: 24px;
-//     color: var(--primaryTextLight);
-//     background-color: #D41443;
-// }
-
-// .him__ancor{
-//     width: 82.8px;
-//     height: 24px;
-//     color: var(--primaryTextLight);
-//     background-color: var(--primaryTextLight);
-//     color: #D41443;
 // }
