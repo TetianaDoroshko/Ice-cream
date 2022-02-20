@@ -16,6 +16,11 @@
   text-transform: uppercase;
   max-width: 232px;
   color: var(--secondaryBrandColor);
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 43px;
+  }
+
   @include tablet {
     @include font(26px, 30px);
     letter-spacing: 0.04em;
