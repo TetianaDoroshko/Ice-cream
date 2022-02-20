@@ -1,397 +1,416 @@
-.hero-section{
-    background-color: #FFB8CA;
-    height: 502px;
-    overflow: hidden;
-    @include mobile{
-        height: 502px;
-    }
-    @include tablet{
-        height: 399px;
-    }
-    @include desktop{
-        height: 665px;
-    }
+.hero-section {
+  background-color: #ffb8ca;
+  height: 502px;
+  overflow: hidden;
+
+  @include tablet {
+    height: 399px;
+  }
+  @include desktop {
+    height: 665px;
+  }
 }
 
-.hero-container{
+.hero-container {
+  display: flex;
+  padding-top: 83px;
+  position: relative;
+  height: 100%;
+  align-items: flex-end;
+  //   min-width: 250px;
+  @include tablet {
+    padding-top: 94px;
+    align-items: unset;
+    // width: 768px;
+    // padding-right: 34px;
+    // padding-left: 34px;
+  }
+  @include desktop {
+    padding-top: 156px;
+    // width: 1280px;
+    // padding-right: 77px;
+    // padding-left: 77px;
+  }
+}
+
+.icecream__container {
+  display: block;
+  position: absolute;
+  width: 346px;
+  height: 419px;
+  left: 36px;
+  top: 83px;
+  @include tablet {
+    // display: block;
+    left: 293px;
+    width: 324px;
+    height: 368px;
+    top: 31px;
+  }
+  @include desktop {
+    width: 538px;
+    height: 613px;
+    top: 52px;
+    left: 380px;
+  }
+}
+
+.hero__circle {
+  border-radius: 50%;
+  background-color: #ffa5ba;
+  //   position: absolute;
+  width: 346px;
+  height: 344px;
+  @include tablet {
+    // display: block;
+    width: 324px;
+    height: 322px;
+  }
+  @include desktop {
+    width: 538px;
+    height: 538px;
+  }
+}
+
+.hero__icecream-pickture {
+  position: absolute;
+  top: 9px;
+  left: 81px;
+  z-index: 1;
+  height: 410px;
+  width: 171px;
+  @include tablet {
+    top: 32px;
+    left: 71px;
+    width: 143px;
+    height: 336px;
+  }
+  @include desktop {
+    top: 56px;
+    left: 119px;
+    width: 236px;
+    height: 557px;
+  }
+}
+
+.page-title {
+  @include font(26px, 30px, 400, 0.04em);
+  color: var(--primaryTextLight);
+  font-family: 'Titan One', cursive;
+  text-transform: uppercase;
+  width: 218px;
+  //   height: 106px;
+  //   @include mobile {
+  //     @include font(26px, 30px, null, 0.04em);
+  //     width: 218px;
+  //     height: 106px;
+  //   }
+  @include tablet {
+    @include font(22px, 25px);
+    width: 162px;
+    // height: 80px;
+  }
+  @include desktop {
+    @include font(38px, 44px);
+    width: 277px;
+    // height: 137px;
+  }
+}
+
+.header__passion {
+  @include font(44px, 46px, 400, 0.04em);
+  color: #d41443;
+  @include tablet {
+    @include font(33px, 35px);
+  }
+  @include desktop {
+    @include font(53px, 55px);
+  }
+}
+
+.hero__ancors {
+  display: flex;
+  margin-top: 19px;
+  @include tablet {
+    margin-top: 17px;
+  }
+  @include desktop {
+    margin-top: 19px;
+  }
+}
+
+.hero-ancors__part {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.hero-ancor {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  font-family: inherit;
+  font-size: 8px;
+  line-height: 1.25;
+  border-radius: 20px;
+  text-decoration: none;
+
+  transition: background-color 250ms var(--timingFunction);
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
+
+.product__ancor {
+  min-width: 62.4px;
+  height: 24px;
+  color: var(--primaryTextLight);
+  background-color: var(--primaryBrandColor);
+
+  &:hover,
+  &:focus {
+    background-color: #ba1f44;
+  }
+
+  @include desktop {
+    min-width: 104px;
+    height: 40px;
+  }
+}
+
+.him__ancor {
+  min-width: 82.8px;
+  height: 24px;
+  //   color: var(--primaryTextLight);
+  background-color: #ffffff;
+  color: var(--primaryBrandColor);
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  @include desktop {
+    min-width: 138px;
+    height: 40px;
+  }
+}
+
+.hero__upper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 160px;
+  @include tablet {
+    // display: flex;
+    // height: 124px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    width: 277px;
+    height: 202px;
+    // margin-left: 38px;
+  }
+}
+
+.cafes-list {
+  display: none;
+  @include tablet {
     display: flex;
-    padding-top: 83px;
-    position: relative;
-    height: 100%;
+    flex-direction: column;
     align-items: flex-end;
-    min-width: 250px;
+    // width: 53px;
+    // height: 100px;
     margin-left: auto;
-    margin-right: auto;
-    padding-right: 20;
-    padding-left: 20;
-    @include tablet{
-        padding-top: 94px;
-        align-items: unset;
-        width: 768px;
-        padding-right: 34px;
-        padding-left: 34px;
-    }
-    @include desktop{
-        padding-top: 156px;
-        width: 1280px;
-        padding-right: 77px;
-        padding-left: 77px;
-    }
+    margin-top: 3px;
+    padding-right: 7px;
+  }
+  @include desktop {
+    padding-right: 0;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-end;
+    // width: 92px;
+    // height: 171px;
+    // margin-left: 596px;
+  }
 }
 
-.icecream__container{
-    display: block;
-    position: absolute;
-    width: 344px;
-    height: 419px;
-    left: 36px;
-    top: 83px;
-    @include tablet{
-        display: block;
-        left: 287px;
-        width: 324px;
-        height: 368px;
-        top: 31px;
-    }
-    @include desktop{
-        width: 538px;
-        height: 613px;
-        top: 52px;
-        left: 455px;
-    }
+.cafe__part {
+  width: 43px;
+  height: 44px;
+  @include desktop {
+    width: 72px;
+    height: 77px;
+  }
 }
 
-.hero__circle{
+.food-truck__part {
+  width: 51px;
+  height: 43px;
+  margin-top: 13px;
+  @include desktop {
+    width: 92px;
+    height: 76px;
+    margin-top: 15px;
+  }
+}
+
+.cafes-list__number {
+  @include font(28px, 32px, null, 0.04em);
+  font-family: var(--secondaryFontFamily);
+  color: #d41443;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: '';
+    // background-image: url(../images/hero/hero-ellipse.svg);
+    // background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: #FFA5BA;
+    background-color: #ffffff;
     position: absolute;
-    width: 346px;
-    height: 344px;
-    @include tablet{
-        display: block;
-        width: 324px;
-        height: 322px;
+    left: 26px;
+    bottom: 18px;
+    z-index: -1;
+  }
+  @include desktop {
+    @include font(46px, 53px);
+    &::after {
+      //   background-image: url(../images/hero/hero-ellipse@desktop.svg);
+      border-radius: 50%;
+      background-color: #ffffff;
+      width: 30px;
+      height: 30px;
+      left: 42px;
+      bottom: 27px;
     }
-    @include desktop{
-        width: 538px;
-        height: 538px;
-    }
+  }
 }
 
-.hero__icecream-pickture{
+.cafes-list__text {
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: end;
+  color: var(--primaryTextLight);
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+}
+
+.hero__girl-pickture {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 168px;
+    height: 133px;
     position: absolute;
-    top: 9px;
-    left: 81px;
-    z-index: 1;
-    height: 410px;
-    width: 171px;
-    @include tablet{
-        top: 32px;
-        left: 71px;
-        width: 143px;
-        height: 336px;
-    }
-    @include desktop{
-        top: 56px;
-        left: 119px;
-        width: 236px;
-        height: 557px;
-    }
+    bottom: 0px;
+    right: 20px;
+  }
+  @include desktop {
+    width: 293px;
+    height: 232px;
+    // right: 20px;
+  }
 }
 
-.page-title{
-    @include font( 26px, 30px, null, 0.04em );
-    color: var(--primaryTextLight);
-    font-family: "Titan One", cursive;
-    text-transform: uppercase;
-    width: 218px;
-    height: 106px;
-    @include mobile{
-        @include font( 26px, 30px, null, 0.04em );
-        width: 218px;
-        height: 106px;
-    
-    }
-    @include tablet{
-        @include font( 22px, 25px, null, 0.04em );
-        width: 162px;
-        height: 80px;  
-    }
-    @include desktop{
-        @include font( 38px, 44px, null, 0.06em );
-        width: 277px;
-        height: 137px;  
-    }
-}
-    
-.header__passion{
-    @include font( 44px, 46px, bold, 0.04em );
-    color: #D41443;
-    @include tablet{
-        @include font( 33px, 35px, bold, 0.04em );
-    }
-    @include desktop{
-        @include font( 53px, 55px, bold, 0.09em );
-    }
+.hero__milk-pickture {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 124px;
+    height: 126px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+  }
+  @include desktop {
+    width: 188px;
+    height: 191px;
+    left: -18px;
+    bottom: 45px;
+  }
 }
 
-.hero__ancors{
-        display: flex;
-        margin-top: 19px;
-        @include tablet{
-            margin-top: 20px;
-        }
-        @include desktop{
-            margin-top: 25px;
-        }
-    }
-    
-.hero-ancors__part{
-    &:not(:last-child){
-        margin-right: 8px;
-    }
-    @include desktop{
-        &:not(:last-child){
-            margin-right: 15px;
-        }
-    }
-}
-
-.hero-ancor{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: "DM Sans", sans-serif;
+.hero-text {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 114px;
+    // height: 48px;
     font-size: 8px;
-    line-height: 1.25;
-    border-radius: 20px;
-    text-decoration: none;
-    @include desktop{
-        font-size: 14px;
-        line-height: 1.3;
-    }
-}
-
-.product__ancor{
-    width: 62.4px;
-    height: 24px;
+    line-height: 1.5;
     color: var(--primaryTextLight);
-    background-color: #D41443;
-    @include desktop{
-        width: 104px;
-        height: 40px;
-    }
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.4;
+    width: 200px;
+    // height: 78px;
+  }
 }
 
-.him__ancor{
-    width: 82.8px;
-    height: 24px;
-    color: var(--primaryTextLight);
-    background-color: var(--primaryTextLight);
-    color: #D41443;
-    @include desktop{
-        width: 138px;
-        height: 40px;
-    }
+.hero__btn-arrow {
+  display: none;
+  @include tablet {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    margin-top: 20px;
+  }
+  @include desktop {
+    width: 26px;
+    height: 26px;
+  }
 }
 
-.hero__upper-container{
+.hero__btn-arrow .btn-arrow__icon {
+  width: 8px;
+  height: 8px;
+  @include desktop {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.hero-text__container {
+  display: none;
+  @include tablet {
+    margin-top: auto;
+    padding-left: 120px;
+    padding-bottom: 34px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 160px;
-    @include tablet{
-        display: flex;
-        height: 124px;
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
-    @include desktop{
-        width: 277px;
-        height: 202px;
-        margin-left: 38px;
-    }
+  }
+  @include desktop {
+    padding-left: 180px;
+    padding-bottom: 56px;
+    // margin-top: 112px;
+  }
 }
 
-.cafes-list{
-    display: none;
-    @include tablet{
-        display: block;
-        width: 53px;
-        height: 100px;
-        margin-left: 401px;
-        margin-top: 10px;
-    }
-    @include desktop{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 92px;
-        height: 171px;
-        margin-left: 596px;
-    }
-}
-
-.cafe__part{
-    width: 43px;
-    height: 44px;
-    @include desktop{
-        width: 72px;
-        height: 77px;
-    }
-}
-
-.food-truck__part{
-    width: 51px;
-    height: 43px;
-    @include desktop{
-        width: 92px;
-        height: 76px;
-        margin-top: 28px;
-    }
-}
-
-.cafes-list__number{
-    @include font( 28px, 32px, null, 0.04em );
-    font-family: "Titan One", cursive;
-    color: #D41443;
-    position: relative;
-    z-index: 2;
-    &::after{
-        content: '';
-        background-image: url(../images/hero/hero-ellipse.svg);
-        background-repeat: no-repeat;
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        left: 26px;
-        bottom: 18px;
-        z-index: -1;
-    }
-    @include desktop{
-        @include font( 46px, 53px, null, 0.04em );
-        &::after{
-            background-image: url(../images/hero/hero-ellipse@desktop.svg);
-            width: 30px;
-            height: 30px;
-            left: 42px;
-            bottom: 27px;
-        }
-    }
-}
-
-.cafes-list__text{
-    font-family: "DM Sans", sans-serif;
-    font-size: 8px;
-    line-height: 1.25;
-    text-align: end;
-    color: var(--primaryTextLight);
-    @include desktop{
-        font-size: 14px;
-        line-height: 1.3;
-        margin-top: 2px;
-    }
-}
-
-.hero__girl-pickture{
-    display: none;
-    @include tablet{
-        display: block;
-        width: 168px;
-        height: 133px;
-        position: absolute;
-        bottom: 0px;
-        right: 34px;
-    }
-    @include desktop{
-        width: 293px;
-        height: 232px;
-        right: 109px;
-    }
-}
-
-.hero__milk-pickture{
-    display: none;
-    @include tablet{
-        display: block;
-        width: 124px;
-        height: 126px;
-        position: absolute;
-        bottom: 28px;
-        left: 20px;
-    }
-    @include desktop{
-        width: 188px;
-        height: 191px;
-        left: 77px;
-        bottom: 45px;
-    }
-}
-
-.hero-text{
-    display: none;
-    @include tablet{
-        display: block;
-        width: 114px;
-        height: 48px;
-        font-family: "DM Sans", sans-serif;
-        font-size: 8px;
-        line-height: 1.5;
-        color: var(--primaryTextLight);
-    }
-    @include desktop{
-        font-size: 14px;
-        line-height: 1.4;
-        width: 200px;
-        height: 78px;
-    }
-}
-
-.btn-arrow{
-    display: none; 
-    @include tablet{
-        display: flex;
-        width: 18px;
-        height: 18px;
-        margin-top: 20px;
-    }
-    @include desktop{
-        width: 26px;
-        height: 26px;
-    }
-}
-
-.btn-arrow__icon{
-    width: 8px;
-    height: 8px;
-    @include desktop{
-        width: 10px;
-        height: 10px;
-    }
-}
-
-.hero-text__container{
-    display: none;
-    @include tablet{
-        margin-top: 66px;
-        margin-left: 134px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    @include desktop{
-        margin-left: 218px;
-        margin-top: 112px;
-    }
-}
-
-.hero__left{
-    @include tablet{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.hero__left {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
