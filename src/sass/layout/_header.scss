@@ -2,7 +2,12 @@
   // padding-top: 6px;
 
   // Add variable
-  background-color: #ffb8ca;
+  // background-color: #ffb8ca;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .header__container {
