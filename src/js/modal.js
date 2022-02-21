@@ -7,13 +7,15 @@
     modalHeader: document.querySelector('[data-modal-header]'),
     mobMenuHeader: document.querySelector('[data-mobmenu-header]'),
 
-    // openModalAboutBtn: document.querySelector('[data-modal-about-open]'),
-    // closeModalAboutBtn: document.querySelector('[data-modal-about-close]'),
-    // modalAbout: document.querySelector('[data-modal-about]'),
-
     openModalFranchiseBtn: document.querySelector('[data-modal-franchise-open]'),
     closeModalFranchiseBtn: document.querySelector('[data-modal-franchise-close]'),
     modalFranchise: document.querySelector('[data-modal-franchise]'),
+
+    openModalAboutBtn: document.querySelector('[data-modal-about-open]'),
+    closeModalAboutBtn: document.querySelector('[data-modal-about-close]'),
+    modalAbout: document.querySelector('[data-modal-about]'),
+    modalAboutOpenBuyBtn: document.querySelector('[data-modal-about-buy-open]'),
+    closeModalAboutBuyBtn: document.querySelector('[data-modal-about-buy-close]'),
 
     // openModalLocationBtn: document.querySelector('[data-modal-location-open]'),
     // closeModalLocationBtn: document.querySelector('[data-modal-location-close]'),
@@ -28,8 +30,10 @@
   refs.openModalFranchiseBtn.addEventListener('click', toggleModalFranchise);
   refs.closeModalFranchiseBtn.addEventListener('click', toggleModalFranchise);
 
-  // refs.openModalAboutBtn.addEventListener('click', toggleModalAbout);
-  // refs.closeModalFranchiseBtn.addEventListener('click', toggleModalAbout);
+  refs.openModalAboutBtn.addEventListener('click', toggleModalAbout);
+  refs.closeModalAboutBtn.addEventListener('click', toggleModalAbout);
+  refs.modalAboutOpenBuyBtn.addEventListener('click', toggleModalHeader);
+  refs.closeModalAboutBuyBtn.addEventListener('click', toggleModalAbout);
 
   // refs.openModalLocationBtn.addEventListener('click', toggleModalLocation);
   // refs.closeModalLocationBtn.addEventListener('click', toggleModalLocation);
@@ -48,10 +52,10 @@
     refs.modalFranchise.classList.toggle('is-hidden');
   }
 
-  // function toggleModalAbout() {
-  //   document.body.classList.toggle('modal-open');
-  //   refs.modalAbout.classList.toggle('is-hidden');
-  // }
+  function toggleModalAbout() {
+    document.body.classList.toggle('modal-open');
+    refs.modalAbout.classList.toggle('is-hidden');
+  }
 
   //  function toggleModalLocation() {
   //    document.body.classList.toggle('modal-open');
