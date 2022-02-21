@@ -28,6 +28,7 @@
 }
 .gallery__item {
   transform: scale(1);
+  transition: filter 400ms ease;
 }
 @keyframes scales {
   0% {
@@ -39,6 +40,12 @@
   100% {
     transform: scale(1);
   }
+}
+.gallery__grid:hover .gallery__item{
+  filter: blur(2px) opacity(0.8);
+}
+.gallery__grid:hover .gallery__item:hover{
+  filter: none;
 }
 
 .gallery__item:hover,
