@@ -27,9 +27,12 @@
 
 .advantages-list__item {
   width: 230px;
-  &:not(:last-child) {
-    margin-bottom: 38px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
   }
+
   @media screen and (min-width: 400px) and (max-width: 767px) {
     &:nth-child(2) {
       margin-left: auto;
