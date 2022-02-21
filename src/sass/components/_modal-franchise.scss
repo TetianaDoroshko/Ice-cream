@@ -39,16 +39,24 @@
 }
 .form__input {
     display: block;
-    padding: 10px;
+    padding: 10px 10px 10px 35px;
     width: 100%;
     color: var(--primaryBrandColor);
-    border-color: var(--secondaryBrandColor);
+    border: 1px solid var(--secondaryBrandColor);
     border-radius: 5px;
     outline: none;
 }
 .form__input::placeholder {
     color: var(--primaryBrandColor);
-   
+}
+.form__icon {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    fill: var(--secondaryBrandColor);
+}
+.form__input:hover+.form__icon {
+    fill: var(--primaryBrandColor);
 }
 .form__input:hover,
 .form__input:focus {
