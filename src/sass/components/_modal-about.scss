@@ -1,7 +1,21 @@
 .modal-about {
   padding: 50px 20px;
 }
-
+.modal-about:hover .modal-about__item {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 1000ms;
+}
+.modal-about:hover .modal-about__item {
+  opacity: 1;
+  transform: translateZ(0%);
+  transition: transform 1000ms;
+}
+.modal-about:hover .modal-about__item {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 1000ms;
+}
 .modal-about__item {
   width: 100%;
   margin-bottom: 25px;
@@ -11,12 +25,18 @@
 
   &:nth-child(1) {
     background-color: #ffb8ca;
+    transform: translateY(100%);
+    opacity: 0;
   }
   &:nth-child(2) {
     background-color: #f0d1a5;
+    transform: translateZ(0%);
+    opacity: 0;
   }
   &:nth-child(3) {
     background-color: #c2e297;
+    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 .modal-about__title {
