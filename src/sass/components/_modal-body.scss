@@ -28,6 +28,7 @@
   color: var(--primaryBrandColor);
   transition: transform 250ms var(--timingFunction), color 250ms var(--timingFunction),
     background-color 250ms var(--timingFunction);
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -39,4 +40,8 @@
 
 .modal__close-icon {
   stroke: currentColor;
+}
+
+.modal-open {
+  overflow: hidden;
 }
