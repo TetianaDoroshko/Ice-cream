@@ -26,6 +26,10 @@
 
     padding-top: 125px;
   }
+  @media screen and (min-width: 1920px) {
+    background-size: contain;
+    background-position: 0% 0%, 100% 0%;
+  }
   /*
   background-image: url(./../images/about/about-bg-left.png),
     url(./../images/about/about-bg-right.png);
