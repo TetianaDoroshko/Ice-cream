@@ -92,9 +92,20 @@
   margin-bottom: 16px;
   background-repeat: no-repeat;
   background-size: contain;
-  transform: scale(1);
-  transition: transform 250ms var(--timingFunction);
-
+  animation: pulse 1000ms infinite, opacity 1000ms infinite;
+  // transform: scale(1);
+  // transition: transform 250ms var(--timingFunction);
+  @keyframes pulse {
+    0% {
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+    50% {
+      transform: scale3d(1, 1, 1);
+    }
+    100% {
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+  }
   @include tablet {
     margin-bottom: 36px;
   }
@@ -117,7 +128,12 @@
   background-image: url(../images/advantages/advantages3.svg);
 }
 
+// .advantages-list__item:hover::before,
+// .advantages-list__item:focus::before {
+//   transform: scale(1.5);
+// }
+
 .advantages-list__item:hover::before,
 .advantages-list__item:focus::before {
-  transform: scale(1.5);
+  animation: none;
 }
