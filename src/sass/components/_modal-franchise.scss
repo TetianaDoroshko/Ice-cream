@@ -1,0 +1,103 @@
+
+.modal-franchise__logo {
+    display: block;
+    margin-bottom: 40px;
+    max-width: 150px;
+}
+.modal-franchise__title {
+    @include font($fs: 26px, $lh: 30px, $fw: null, $ls: 0.04em);
+    font-family: var(--secondaryFontFamily);
+    color: var(--secondaryBrandColor);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-franchise__span {
+    font-size: 33px;
+    line-height: 1.06;
+    color: var(--primaryBrandColor);
+}
+.modal-franchise__text {
+    margin-bottom: 10px;
+}
+.form__label {
+    display: block;
+    margin-bottom: 10px;
+}
+.form__input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    color: var(--primaryBrandColor);
+    border-color: var(--secondaryBrandColor);
+    border-radius: 5px;
+    outline: none;
+}
+.form__input::placeholder {
+    color: var(--primaryBrandColor);
+   
+}
+.form__input:hover,
+.form__input:focus {
+    border-color: var(--primaryBrandColor); 
+}
+.form__form-field {
+    position: relative;
+    margin-bottom: 15px;
+}
+.checkbox {
+    appearance: none;
+    position: absolute;
+  }
+  .form__label-policy {
+      position: relative;
+      display: flex;
+      align-items: center;
+  }
+  .form__text-polisy {
+      color: var(--primaryBrandColor);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+  }
+
+  .form__label-policy::before {
+    content: '';
+    width: 40px;
+    min-width: 40px;
+    height: 24px;
+    border: 1px solid var(--secondaryBrandColor);
+    border-radius: 50px;
+    margin-right: 5px;
+    transition: border 400ms var(--timingFunction);
+    margin-right: 10px;
+  }
+.form__label-policy::after {
+    position: absolute;
+    top: 9px;
+    left: 4px;
+    content: '';
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--secondaryBrandColor);
+    transition: background-color 400ms var(--timingFunction), transform 400ms var(--timingFunction);
+    @media (min-width: 379px) {
+        top: 3px;
+    }
+  }
+  .checkbox:checked + .form__label-policy::after {
+    transform: translateX(14px);
+    background-color: var(--primaryBrandColor);
+  }
+  .checkbox:checked + .form__label-policy::before {
+    border: 1px solid var(--primaryBrandColor);
+  }
+  .form__button {
+      display: block;
+      
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      text-align: center;
+  }
