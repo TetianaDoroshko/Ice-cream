@@ -5,7 +5,6 @@
   @include tablet {
     padding-top: 121px;
     padding-bottom: 119px;
-    background: rgba(250, 250, 250, 0.4);
   }
 
   @include desktop {
@@ -17,13 +16,13 @@
   text-align: center;
   margin: 0 auto;
 }
+
 .reviews-images {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-
-  width: 85px;
-  height: 85px;
+  width: 100%;
+  height: 100%;
 
   margin-bottom: 29px;
   @include tablet {
@@ -62,7 +61,7 @@
     height: 40px;
     width: 54px;
     background-size: contain;
-    background: url(../images/reviews/befor_1.png);
+    background: url(../images/reviews/befor_one.svg);
     background-repeat: no-repeat;
     position: absolute;
     left: 65px;
@@ -78,6 +77,15 @@
       left: 50px;
       top: 32px;
     }
+  }
+  transition: transform 500ms linear 500ms;
+  transform: scale(1);
+}
+.reviews-text {
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+    background-color: transparent;
   }
 }
 
@@ -99,6 +107,7 @@
     width: 750px;
   }
 }
+
 .reviews-gradient {
   width: 180px;
   min-height: 245px;
@@ -123,18 +132,18 @@
 
 .reviews__name {
   @include font(14px, 26px, 500);
-  margin-top: 30px;
+  padding-top: 30px;
   @media screen and (max-width: 768px) {
-    margin-bottom: 42px;
+    padding-bottom: 42px;
   }
   @include tablet {
-    margin-top: 24px;
-    margin-bottom: 47px;
+    padding-top: 24px;
+    padding-bottom: 47px;
   }
 
   @include desktop {
     @include font(20px, 37px, 500);
-    margin-top: 15px;
+    padding-top: 15px;
   }
 
   &::before {
@@ -171,8 +180,8 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 85px;
+  height: 85px;
   object-fit: cover;
 }
 
