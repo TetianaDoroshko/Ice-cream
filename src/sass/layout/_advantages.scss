@@ -92,20 +92,42 @@
   margin-bottom: 16px;
   background-repeat: no-repeat;
   background-size: contain;
-  animation: pulse 1000ms infinite, opacity 1000ms infinite;
+  animation: pulse 1500ms linear infinite alternate;
   // transform: scale(1);
   // transition: transform 250ms var(--timingFunction);
+  // @keyframes pulse {
+  //   0% {
+  //     transform: scale3d(1, 1, 1);
+  //   }
+  //   50% {
+  //     transform: scale3d(1.1, 1.1, 1.1);
+  //   }
+  //   100% {
+  //     transform: scale3d(1, 1, 1);
+  //   }
+  // }
+
   @keyframes pulse {
     0% {
-      transform: scale3d(1.5, 1.5, 1.5);
+      transform: scale3d(1);
     }
-    50% {
-      transform: scale3d(1, 1, 1);
+    15% {
+      transform: scale3d(1.1, 1.1, 1.1);
     }
     100% {
-      transform: scale3d(1.5, 1.5, 1.5);
+      transform: scale3d(1);
     }
   }
+  // @keyframes pulse {
+  //   0% {
+  //     transform: rotateZ(-10deg);
+  //   }
+
+  //   100% {
+  //     transform: rotateZ(10deg);
+  //   }
+  // }
+
   @include tablet {
     margin-bottom: 36px;
   }
@@ -133,7 +155,7 @@
 //   transform: scale(1.5);
 // }
 
-.advantages-list__item:hover::before,
-.advantages-list__item:focus::before {
-  animation: none;
-}
+// .advantages-list__item:hover::before,
+// .advantages-list__item:focus::before {
+//   animation: none;
+// }
