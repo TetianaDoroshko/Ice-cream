@@ -1,4 +1,4 @@
-<div class="backdrop is-hidden" data-modal-about>
+<div class="backdrop" id="modal-about">
   <div class="modal modal-about">
     <ul class="modal-about__list list">
       <li class="modal-about__item">
@@ -32,17 +32,16 @@
       src="./images/hero/milk.png"
       alt="milk"
     />
-    <button class="modal__close-btn" type="button" data-modal-about-close>
+    <button class="modal__close-btn js-modal-close" type="button">
       <svg class="modal__close-icon" width="30" height="30">
         <use href="./images/sprite.svg#close-btn"></use>
       </svg>
     </button>
 
     <button
-      class="main-btn main-btn--dark main-btn--modal"
+      class="main-btn main-btn--dark main-btn--modal js-modal-open"
       type="submit"
-      data-modal-about-buy-open
-      data-modal-about-buy-close
+      data="modal-header"
     >
       Buy now
     </button>

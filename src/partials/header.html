@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header lock-padding">
   <div class="container header__container">
     <div class="header-menu">
       <a href="" class="logo"
@@ -32,8 +32,8 @@
         </button>
         <button
           type="button"
-          class="header__main-btn main-btn--light main-btn"
-          data-modal-header-open
+          class="header__main-btn main-btn--light main-btn js-modal-open"
+          data="modal-header"
         >
           Buy now
           <svg class="main-btn__icon" width="8" height="10">
@@ -46,7 +46,7 @@
 
   <!-- MOBILE MENU -->
 
-  <div class="mobile-menu js-menu-container" id="mobile-menu" data-mobmenu-header>
+  <div class="mobile-menu js-menu-container" id="mobile-menu">
     <div class="container-menu-wrapper">
       <button class="close-btn js-close-menu" aria-label="Закрытие мобильного меню">
         <svg class="close-btn__icon">
@@ -56,9 +56,8 @@
 
       <button
         type="button"
-        class="main-btn--light mobile-menu__main-btn main-btn"
-        data-modal-mobmenu-open
-        data-modal-mobmenu-close
+        class="main-btn--light mobile-menu__main-btn main-btn js-menu-close js-modal-open"
+        data="modal-header"
       >
         Buy now
         <svg class="main-btn__icon" width="8" height="10">
@@ -68,19 +67,19 @@
 
       <ul class="list mobile-menu__list">
         <li class="mobile-menu__item">
-          <a href="./index.html" class="mobile-menu__link link">Home</a>
+          <a href="./index.html" class="mobile-menu__link link js-menu-close">Home</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#about" class="mobile-menu__link link">About us</a>
+          <a href="#about" class="mobile-menu__link link js-menu-close">About us</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#advantages" class="mobile-menu__link link">How it’s made?</a>
+          <a href="#advantages" class="mobile-menu__link link js-menu-close">How it’s made?</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#products" class="mobile-menu__link link">Our products</a>
+          <a href="#products" class="mobile-menu__link link js-menu-close">Our products</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#contacts" class="mobile-menu__link link">Contact</a>
+          <a href="#contacts" class="mobile-menu__link link js-menu-close">Contact</a>
         </li>
       </ul>
     </div>

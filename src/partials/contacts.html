@@ -77,7 +77,11 @@
     </ul>
     <ul class="list contacts__buttons">
       <li class="contacts__buttons-item">
-        <button type="button" class="contacts__main-btn main-btn main-btn--dark">
+        <button
+          type="button"
+          class="contacts__main-btn main-btn main-btn--dark js-modal-open"
+          data="modal-location"
+        >
           Our Locations
           <svg class="main-btn__icon" width="8" height="10">
             <use href="./images/sprite.svg#arrow-main-btn"></use>
@@ -87,8 +91,8 @@
       <li>
         <button
           type="button"
-          class="contacts__main-btn main-btn main-btn--light"
-          data-modal-franchise-open
+          class="contacts__main-btn main-btn main-btn--light js-modal-open"
+          data="modal-franchise"
         >
           Franchise
           <svg class="main-btn__icon" width="8" height="10">

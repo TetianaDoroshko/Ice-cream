@@ -1,64 +1,126 @@
-(() => {
-  const refs = {
-    openModalHeaderBtn: document.querySelector('[data-modal-header-open]'),
-    openModalMobMenuBtn: document.querySelector('[data-modal-mobmenu-open]'),
-    closeModalHeaderBtn: document.querySelector('[data-modal-header-close]'),
-    closeModalMobMenuBtn: document.querySelector('[data-modal-mobmenu-close]'),
-    modalHeader: document.querySelector('[data-modal-header]'),
-    mobMenuHeader: document.querySelector('[data-mobmenu-header]'),
+const modalBtns = document.querySelectorAll('.js-modal-open');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll('.lock-padding');
 
-    openModalFranchiseBtn: document.querySelector('[data-modal-franchise-open]'),
-    closeModalFranchiseBtn: document.querySelector('[data-modal-franchise-close]'),
-    modalFranchise: document.querySelector('[data-modal-franchise]'),
+let unlock = true;
 
-    openModalAboutBtn: document.querySelector('[data-modal-about-open]'),
-    closeModalAboutBtn: document.querySelector('[data-modal-about-close]'),
-    modalAbout: document.querySelector('[data-modal-about]'),
-    modalAboutOpenBuyBtn: document.querySelector('[data-modal-about-buy-open]'),
-    closeModalAboutBuyBtn: document.querySelector('[data-modal-about-buy-close]'),
+const timeout = 0;
 
-    // openModalLocationBtn: document.querySelector('[data-modal-location-open]'),
-    // closeModalLocationBtn: document.querySelector('[data-modal-location-close]'),
-    // modalLocation: document.querySelector('[data-modal-location]'),
-  };
+if (modalBtns.length > 0) {
+  for (let index = 0; index < modalBtns.length; index++) {
+    const modalBtn = modalBtns[index];
+    modalBtn.addEventListener('click', function (e) {
+      const modalName = modalBtn.getAttribute('data');
+      const curentModal = document.getElementById(modalName);
+      modalOpen(curentModal);
+    });
+  }
+}
 
-  refs.openModalHeaderBtn.addEventListener('click', toggleModalHeader);
-  refs.openModalMobMenuBtn.addEventListener('click', toggleModalHeader);
-  refs.closeModalHeaderBtn.addEventListener('click', toggleModalHeader);
-  refs.closeModalMobMenuBtn.addEventListener('click', toggleMenuHeader);
+const modalCloseBtn = document.querySelectorAll('.js-modal-close');
+if (modalCloseBtn.length > 0) {
+  for (let index = 0; index < modalCloseBtn.length; index++) {
+    const el = modalCloseBtn[index];
+    el.addEventListener('click', function (e) {
+      modalClose(el.closest('.backdrop'));
+    });
+  }
+}
 
-  refs.openModalFranchiseBtn.addEventListener('click', toggleModalFranchise);
-  refs.closeModalFranchiseBtn.addEventListener('click', toggleModalFranchise);
+function modalOpen(curentModal) {
+  if (curentModal && unlock) {
+    const modalActive = document.querySelector('.backdrop.is-open');
+    if (modalActive) {
+      modalClose(modalActive, false);
+    } else {
+      bodyLock();
+    }
+    curentModal.classList.add('is-open');
+    curentModal.addEventListener('click', function (e) {
+      if (!e.target.closest('.modal')) {
+        modalClose(e.target.closest('.backdrop'));
+      }
+    });
+  }
+}
 
-  refs.openModalAboutBtn.addEventListener('click', toggleModalAbout);
-  refs.closeModalAboutBtn.addEventListener('click', toggleModalAbout);
-  refs.modalAboutOpenBuyBtn.addEventListener('click', toggleModalHeader);
-  refs.closeModalAboutBuyBtn.addEventListener('click', toggleModalAbout);
+function modalClose(modalActive, doUnlock = true) {
+  if (unlock) {
+    modalActive.classList.remove('is-open');
+    if (doUnlock) {
+      bodyUnLock();
+    }
+  }
+}
 
-  // refs.openModalLocationBtn.addEventListener('click', toggleModalLocation);
-  // refs.closeModalLocationBtn.addEventListener('click', toggleModalLocation);
+function bodyLock() {
+  const lockPaddingValue = window.innerWidth - document.querySelector('.body').offsetWidth + 'px';
 
-  function toggleModalHeader() {
-    document.body.classList.toggle('modal-open');
-    refs.modalHeader.classList.toggle('is-hidden');
+  if (lockPadding.length > 0) {
+    for (let index = 0; index < lockPadding.length; index++) {
+      const el = lockPadding[index];
+      el.style.paddingRight = lockPaddingValue;
+    }
   }
 
-  function toggleMenuHeader() {
-    refs.mobMenuHeader.classList.toggle('is-open');
-  }
+  body.style.paddingRight = lockPaddingValue;
+  body.classList.add('lock');
 
-  function toggleModalFranchise() {
-    document.body.classList.toggle('modal-open');
-    refs.modalFranchise.classList.toggle('is-hidden');
-  }
+  unlock = false;
+  setTimeout(function () {
+    unlock = true;
+  }, timeout);
+}
 
-  function toggleModalAbout() {
-    document.body.classList.toggle('modal-open');
-    refs.modalAbout.classList.toggle('is-hidden');
-  }
+function bodyUnLock() {
+  setTimeout(function () {
+    if (lockPadding.length > 0) {
+      for (let index = 0; index < lockPadding.length; index++) {
+        const el = lockPadding[index];
+        el.style.paddingRight = '0px';
+      }
+    }
+    body.style.paddingRight = '0px';
+    body.classList.remove('lock');
+  }, timeout);
 
-  //  function toggleModalLocation() {
-  //    document.body.classList.toggle('modal-open');
-  //    refs.modalLocation.classList.toggle('is-hidden');
-  //  }
+  unlock = false;
+  setTimeout(function () {
+    unlock = true;
+  }, timeout);
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.which === 27) {
+    const modalActive = document.querySelector('.backdrop.is-open');
+    modalClose(modalActive);
+  }
+});
+
+(function () {
+  // проверяем поддержку
+  if (!Element.prototype.closest) {
+    // реализуем
+    Element.prototype.closest = function (css) {
+      var node = this;
+
+      while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+      }
+      return null;
+    };
+  }
+})();
+
+(function () {
+  // проверяем поддержку
+  if (!Element.prototype.matches) {
+    // определяем свойство
+    Element.prototype.matches =
+      Element.prototype.matchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector;
+  }
 })();
