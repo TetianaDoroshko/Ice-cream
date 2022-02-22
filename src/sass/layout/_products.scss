@@ -242,38 +242,31 @@
   left: 50%;
   transform: translate(-50%, -46%);
 
-  transition: 250ms;
+  transition: background-color 250ms linear;
 
   @include tablet {
     background-size: 100%;
     width: 220px;
     height: 226px;
-    transition: background-color 500ms linear, transform 500ms ease-in-out;
   }
   @include desktop {
     width: 335px;
     height: 335px;
-    transform: translate(-50%, -63%);
   }
 }
 .products-card__div:hover::before {
   background-color: #fc8da7;
   border-radius: 50%;
-  transform: rotateY(180deg);
-  width: 349px;
-  height: 352px;
+  width: 249px;
+  height: 252px;
 
   @include tablet {
-    width: 320px;
-    height: 326px;
-
-    top: -25%;
-    left: 0;
+    width: 220px;
+    height: 226px;
   }
   @include desktop {
-    width: 435px;
-    height: 435px;
-    top: -39%;
+    width: 335px;
+    height: 335px;
   }
 }
 
