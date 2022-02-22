@@ -64,6 +64,10 @@
 
   padding-top: 161px;
   padding-bottom: 40px;
+
+  &:hover {
+    border: 2px solid #fc8da7;
+  }
   @include tablet {
     padding-top: 152px;
   }
@@ -78,6 +82,9 @@
 
   &:nth-child(2) .products-card__div {
     background: #f0d1a5;
+    &:hover {
+      border: 2px solid #e9c08a;
+    }
     &::before {
       background-image: url(../images/products/product2.png);
       @include retinabg {
@@ -87,6 +94,9 @@
   }
   &:nth-child(3) .products-card__div {
     background: #c2e297;
+    &:hover {
+      border: 2px solid #afd180;
+    }
     &::before {
       background-image: url(../images/products/product3.png);
       @include retinabg {
@@ -285,5 +295,3 @@
     }
   }
 }
-
-/*Анімація  карточки*/
