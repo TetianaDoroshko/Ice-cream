@@ -78,15 +78,6 @@
       top: 32px;
     }
   }
-  transition: transform 500ms linear 500ms;
-  transform: scale(1);
-}
-.reviews-text {
-  &:hover,
-  &:focus {
-    transform: scale(1.25);
-    background-color: transparent;
-  }
 }
 
 .reviews-gradient__content {
