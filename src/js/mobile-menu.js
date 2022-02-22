@@ -22,3 +22,19 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
+const menuCloseBtn = document.querySelectorAll('.js-menu-close');
+if (menuCloseBtn.length > 0) {
+  for (let index = 0; index < menuCloseBtn.length; index++) {
+    const el = menuCloseBtn[index];
+    el.addEventListener('click', function (e) {
+      menuClose(el.closest('.mobile-menu'));
+    });
+  }
+}
+
+function menuClose(isMenuOpen = true) {
+  isMenuOpen.classList.remove('is-open');
+  const scrollLockMethod = !isMenuOpen ? 'disableBodyScroll' : 'enableBodyScroll';
+  bodyScrollLock[scrollLockMethod](document.body);
+}
