@@ -1,10 +1,8 @@
-
 .modal-franchise {
     background-image: url(../images/hero/milk.png);
     background-repeat: no-repeat;
     background-position: 95% -9%;
 }
-
 .modal-franchise__logo {
     display: block;
     margin-bottom: 40px;
@@ -20,7 +18,6 @@
     @include mobile {
         font-size: 26px;
     }
-
 }
 .modal-franchise__span {
     font-size: 28px;
@@ -55,10 +52,9 @@
     left: 10px;
     fill: var(--secondaryBrandColor);
 }
-.form__input:hover+.form__icon {
+.form__input:focus+.form__icon {
     fill: var(--primaryBrandColor);
 }
-.form__input:hover,
 .form__input:focus {
     border-color: var(--primaryBrandColor); 
 }
@@ -69,20 +65,19 @@
 .checkbox {
     appearance: none;
     position: absolute;
-  }
-  .form__label-policy {
-      position: relative;
-      display: flex;
-      align-items: center;
-  }
-  .form__text-polisy {
-      color: var(--primaryBrandColor);
-      text-decoration: none;
-      font-weight: 500;
-      cursor: pointer;
-  }
-
-  .form__label-policy::before {
+}
+.form__label-policy {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.form__text-polisy {
+    color: var(--primaryBrandColor);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.form__label-policy::before {
     content: '';
     width: 40px;
     min-width: 40px;
@@ -92,7 +87,7 @@
     margin-right: 5px;
     transition: border 400ms var(--timingFunction);
     margin-right: 10px;
-  }
+}
 .form__label-policy::after {
     position: absolute;
     top: 9px;
