@@ -242,7 +242,7 @@
   left: 50%;
   transform: translate(-50%, -46%);
 
-  transition: background-color 250ms linear;
+  transition: background-color 0ms linear;
 
   @include tablet {
     background-size: 100%;
