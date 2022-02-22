@@ -6,6 +6,7 @@
   @include tablet {
     height: 399px;
   }
+
   @include desktop {
     height: 665px;
   }
@@ -17,112 +18,69 @@
   position: relative;
   height: 100%;
   align-items: flex-end;
-  //   min-width: 250px;
+
   @include tablet {
     padding-top: 94px;
     align-items: unset;
-    // width: 768px;
-    // padding-right: 34px;
-    // padding-left: 34px;
   }
+
   @include desktop {
     padding-top: 156px;
-    // width: 1280px;
-    // padding-right: 77px;
-    // padding-left: 77px;
   }
 }
 
-.icecream__container {
-  display: block;
-  position: absolute;
-  width: 346px;
-  height: 419px;
-  left: 36px;
-  top: 83px;
+.hero__left {
   @include tablet {
-    // display: block;
-    left: 293px;
-    width: 324px;
-    height: 368px;
-    top: 31px;
-  }
-  @include desktop {
-    width: 538px;
-    height: 613px;
-    top: 52px;
-    left: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-.hero__circle {
-  border-radius: 50%;
-  background-color: #ffa5ba;
-  //   position: absolute;
-  width: 346px;
-  height: 344px;
+.hero__upper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 160px;
+
   @include tablet {
-    // display: block;
-    width: 324px;
-    height: 322px;
+    padding-top: 10px;
+    padding-bottom: 0;
   }
+
   @include desktop {
-    width: 538px;
-    height: 538px;
+    width: 277px;
   }
 }
 
-.hero__icecream-pickture {
-  position: absolute;
-  top: 9px;
-  left: 81px;
-  z-index: 1;
-  height: 410px;
-  width: 171px;
-  @include tablet {
-    top: 32px;
-    left: 71px;
-    width: 143px;
-    height: 336px;
-  }
-  @include desktop {
-    top: 56px;
-    left: 119px;
-    width: 236px;
-    height: 557px;
-  }
-}
-
-.page-title {
+.hero__title {
   @include font(26px, 30px, 400, 0.04em);
   color: var(--primaryTextLight);
   font-family: 'Titan One', cursive;
   text-transform: uppercase;
   width: 218px;
-  //   height: 106px;
-  //   @include mobile {
-  //     @include font(26px, 30px, null, 0.04em);
-  //     width: 218px;
-  //     height: 106px;
-  //   }
+
   @include tablet {
     @include font(22px, 25px);
     width: 162px;
-    // height: 80px;
   }
+
   @include desktop {
     @include font(38px, 44px);
     width: 277px;
-    // height: 137px;
   }
 }
 
 .header__passion {
   @include font(44px, 46px, 400, 0.04em);
   color: #d41443;
+
   @include tablet {
     @include font(33px, 35px);
   }
+
   @include desktop {
     @include font(53px, 55px);
   }
@@ -131,9 +89,11 @@
 .hero__ancors {
   display: flex;
   margin-top: 19px;
+
   @include tablet {
     margin-top: 17px;
   }
+
   @include desktop {
     margin-top: 19px;
   }
@@ -151,12 +111,9 @@
 }
 
 .hero-ancor {
-  display: flex;
+  @include flex(flex, center, center);
   text-align: center;
-  justify-content: center;
-  align-items: center;
   padding: 0 20px;
-  font-family: inherit;
   font-size: 8px;
   line-height: 1.25;
   border-radius: 20px;
@@ -190,7 +147,6 @@
 .him__ancor {
   min-width: 82.8px;
   height: 24px;
-  //   color: var(--primaryTextLight);
   background-color: #ffffff;
   color: var(--primaryBrandColor);
 
@@ -205,53 +161,117 @@
   }
 }
 
-.hero__upper-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 160px;
+.hero-text__container {
+  display: none;
+
   @include tablet {
-    // display: flex;
-    // height: 124px;
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-top: auto;
+    padding-left: 120px;
+    padding-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   @include desktop {
-    width: 277px;
-    height: 202px;
-    // margin-left: 38px;
+    padding-left: 180px;
+    padding-bottom: 56px;
+  }
+}
+
+.hero-text {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 114px;
+    font-size: 8px;
+    line-height: 1.5;
+    color: var(--primaryTextLight);
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.4;
+    width: 200px;
+  }
+}
+
+.hero__btn-arrow:hover,
+.hero__btn-arrow:focus {
+  transform: scale(1.1) rotate(-90deg);
+}
+
+.hero__about {
+  display: none;
+}
+
+#read-hero:checked {
+  & ~ .hero__about {
+    display: block;
+  }
+}
+
+.hero__btn-arrow {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.hero__btn-arrow .btn-arrow__icon {
+  width: 8px;
+  height: 8px;
+
+  @include desktop {
+    width: 10px;
+    height: 10px;
   }
 }
 
 .cafes-list {
   display: none;
+
   @include tablet {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    // width: 53px;
-    // height: 100px;
     margin-left: auto;
-    margin-top: 3px;
+    padding-top: 3px;
     padding-right: 7px;
   }
+
   @include desktop {
     padding-right: 0;
+  }
+}
 
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-end;
-    // width: 92px;
-    // height: 171px;
-    // margin-left: 596px;
+.cafes-list__text {
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: end;
+  color: var(--primaryTextLight);
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-top: 2px;
   }
 }
 
 .cafe__part {
   width: 43px;
   height: 44px;
+
   @include desktop {
     width: 72px;
     height: 77px;
@@ -262,6 +282,7 @@
   width: 51px;
   height: 43px;
   margin-top: 13px;
+
   @include desktop {
     width: 92px;
     height: 76px;
@@ -270,147 +291,208 @@
 }
 
 .cafes-list__number {
+  position: relative;
+  z-index: 2;
+
   @include font(28px, 32px, null, 0.04em);
   font-family: var(--secondaryFontFamily);
   color: #d41443;
-  position: relative;
-  z-index: 2;
-  &::after {
+
+  &::before {
     content: '';
-    // background-image: url(../images/hero/hero-ellipse.svg);
-    // background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #ffffff;
     position: absolute;
     left: 26px;
     bottom: 18px;
     z-index: -1;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
   }
+
   @include desktop {
     @include font(46px, 53px);
-    &::after {
-      //   background-image: url(../images/hero/hero-ellipse@desktop.svg);
-      border-radius: 50%;
-      background-color: #ffffff;
-      width: 30px;
-      height: 30px;
+
+    &::before {
       left: 42px;
       bottom: 27px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
 
-.cafes-list__text {
-  font-size: 8px;
-  line-height: 1.25;
-  text-align: end;
-  color: var(--primaryTextLight);
+.icecream__container {
+  position: absolute;
+  width: 346px;
+  height: 419px;
+  left: 36px;
+
+  top: 83px;
+
+  @media screen and (min-width: 414px) and (max-width: 767px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include tablet {
+    top: 31px;
+    left: 293px;
+
+    width: 324px;
+    height: 368px;
+  }
+
   @include desktop {
-    font-size: 14px;
-    line-height: 1.3;
-    margin-top: 2px;
+    top: 52px;
+    left: 380px;
+
+    width: 538px;
+    height: 613px;
+  }
+}
+
+.hero__circle {
+  width: 346px;
+  height: 344px;
+
+  border-radius: 50%;
+  background-color: #ffa5ba;
+
+  animation-name: circle;
+  animation-timing-function: linear;
+  animation-duration: 800ms;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+
+  @include tablet {
+    width: 324px;
+    height: 322px;
+  }
+  @include desktop {
+    width: 538px;
+    height: 538px;
+  }
+}
+
+.hero__icecream-pickture {
+  position: absolute;
+  top: 9px;
+  left: 81px;
+  z-index: 1;
+  height: 410px;
+  width: 171px;
+
+  animation-name: icecream;
+  animation-timing-function: linear;
+  animation-duration: 800ms;
+  animation-delay: 600ms;
+  animation-fill-mode: backwards;
+
+  @include tablet {
+    top: 32px;
+    left: 71px;
+    width: 143px;
+    height: 336px;
+  }
+  @include desktop {
+    top: 56px;
+    left: 119px;
+    width: 236px;
+    height: 557px;
   }
 }
 
 .hero__girl-pickture {
   display: none;
   @include tablet {
-    display: block;
-    width: 168px;
-    height: 133px;
     position: absolute;
     bottom: 0px;
     right: 20px;
+
+    display: block;
+    width: 168px;
+    height: 133px;
   }
   @include desktop {
     width: 293px;
     height: 232px;
-    // right: 20px;
+  }
+
+  &:hover {
+    animation-name: girl;
+    animation-timing-function: linear;
+    animation-duration: 120ms;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
   }
 }
 
 .hero__milk-pickture {
   display: none;
   @include tablet {
-    display: block;
-    width: 124px;
-    height: 126px;
     position: absolute;
     bottom: 28px;
     left: 20px;
+
+    display: block;
+    width: 124px;
+    height: 126px;
+
+    transform-origin: center bottom;
+    animation-name: milk;
+    animation-timing-function: linear;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
   @include desktop {
-    width: 188px;
-    height: 191px;
     left: -18px;
     bottom: 45px;
+
+    width: 188px;
+    height: 191px;
   }
 }
 
-.hero-text {
-  display: none;
-  @include tablet {
-    display: block;
-    width: 114px;
-    // height: 48px;
-    font-size: 8px;
-    line-height: 1.5;
-    color: var(--primaryTextLight);
+@keyframes circle {
+  0% {
+    transform: scale(0);
   }
-  @include desktop {
-    font-size: 14px;
-    line-height: 1.4;
-    width: 200px;
-    // height: 78px;
+
+  100% {
+    transform: scale(1);
   }
 }
 
-.hero__btn-arrow {
-  display: none;
-  @include tablet {
-    display: flex;
-    width: 18px;
-    height: 18px;
-    margin-top: 20px;
+@keyframes icecream {
+  0% {
+    transform: translateY(100%);
   }
-  @include desktop {
-    width: 26px;
-    height: 26px;
+
+  100% {
+    transform: translateY(0);
   }
 }
 
-.hero__btn-arrow .btn-arrow__icon {
-  width: 8px;
-  height: 8px;
-  @include desktop {
-    width: 10px;
-    height: 10px;
+@keyframes milk {
+  0% {
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    transform: rotateZ(-10deg);
   }
 }
 
-.hero-text__container {
-  display: none;
-  @include tablet {
-    margin-top: auto;
-    padding-left: 120px;
-    padding-bottom: 34px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+@keyframes girl {
+  0% {
+    transform: translateX(-10px);
   }
-  @include desktop {
-    padding-left: 180px;
-    padding-bottom: 56px;
-    // margin-top: 112px;
-  }
-}
 
-.hero__left {
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  100% {
+    transform: translateX(10px);
   }
 }
