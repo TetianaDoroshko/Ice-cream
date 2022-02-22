@@ -1,6 +1,7 @@
 body {
   font-family: var(--primaryFontFamily);
   color: var(--primaryTextDark);
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
