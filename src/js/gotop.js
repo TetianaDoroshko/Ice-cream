@@ -15,3 +15,11 @@ $(function () {
     }
   });
 });
+
+// Fix mobile header
+
+$(document).scroll(function (e) {
+  $(window).scrollTop() > 502
+    ? $('.header').addClass('header-scroll')
+    : $('.header').removeClass('header-scroll');
+});

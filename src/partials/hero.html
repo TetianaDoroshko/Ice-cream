@@ -2,7 +2,7 @@
   <div class="hero-container container">
     <div class="hero__left">
       <div class="hero__upper-container">
-        <h1 class="page-title hero__title">
+        <h1 class="hero__title">
           ice cream made with <span class="header__passion">passion</span>
         </h1>
         <ul class="hero-ancors-list list hero__ancors">
@@ -15,15 +15,21 @@
         </ul>
       </div>
       <div class="hero-text__container">
+        <input type="checkbox" id="read-hero" hidden />
+        <p class="hero-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et
+        </p>
         <p class="hero-text hero__about">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et
         </p>
-        <button class="hero__btn-arrow btn-arrow" type="button">
+
+        <label for="read-hero" class="hero__btn-arrow btn-arrow">
           <svg class="btn-arrow__icon" width="12" height="12">
             <use href="./images/sprite.svg#arrow-right"></use>
           </svg>
-        </button>
+        </label>
       </div>
     </div>
     <ul class="cafes-list list hero-cafes__list">
