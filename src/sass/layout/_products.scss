@@ -225,7 +225,8 @@
   }
 }
 
-/*Анімація*/
+/*Анімація  кружочки */
+
 .products-card__div::before {
   content: '';
   position: absolute;
@@ -242,7 +243,7 @@
   left: 50%;
   transform: translate(-50%, -46%);
 
-  transition: background-color 0ms linear;
+  transition: border-radius 250ms;
 
   @include tablet {
     background-size: 100%;
@@ -284,3 +285,5 @@
     }
   }
 }
+
+/*Анімація  карточки*/
