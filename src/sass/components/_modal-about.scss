@@ -5,25 +5,10 @@
 .backdrop.is-open .modal-about__item {
   opacity: 1;
   transform: translateX(0%);
-  transition: transform 1000ms;
-  transition-delay: 10ms;
+
+  transition: transform 1000ms var(--timingFunction);
 }
-/*
-.modal-about:hover .modal-about__item {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: transform 1000ms;
-}
-.modal-about:hover .modal-about__item {
-  opacity: 1;
-  transform: translateZ(0%);
-  transition: transform 1000ms;
-}
-.modal-about:hover .modal-about__item {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: transform 1000ms;
-}*/
+
 .modal-about__item {
   width: 100%;
   margin-bottom: 25px;
@@ -55,7 +40,7 @@
   color: #ffffff;
 
   @include tablet {
-    @include font(18px, 25px, 400, 0.04em);
+    @include font(18px, 25px);
   }
 }
 .modal-about__text {

@@ -21,8 +21,7 @@
   }
 
   @include desktop {
-    background-size: 50%;
-    background-position: 0% 100%, 100% 100%;
+    background-position: 0% 123%, 100% 123%;
 
     padding-top: 125px;
   }
@@ -30,23 +29,7 @@
     background-size: contain;
     background-position: 0% 0%, 100% 0%;
   }
-  /*
-  background-image: url(./../images/about/about-bg-left.png),
-    url(./../images/about/about-bg-right.png);
-  background-size: contain;
-  background-position: 0%, 100%;
-  background-repeat: no-repeat;
-   background: url(./../images/about/about-bg-left.png) 0% 100% no-repeat,
-      url(./../images/about/about-bg-right.png) 100% 100% no-repeat;
-    background-color: #fff5f6;*/
 }
-
-// .about__title {
-//   @media screen and (max-width: 767px) {
-//     width: 200px;
-//     margin: 0 auto;
-//   }
-// }
 
 .about__wrapper {
   margin-top: 26px;
@@ -130,33 +113,6 @@
     @include font(14px, 27px);
   }
 }
-/*
-.image-milk-left {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  @include tablet {
-    display: none;
-  }
-  @include desktop {
-    display: block;
-    left: 0;
-    bottom: 0;
-  }
-}
-.image-milk-right {
-  position: absolute;
-  bottom: 0;
-  @include tablet {
-    display: none;
-  }
-  @include desktop {
-    display: block;
-    right: 0;
-    bottom: 0;
-  }
-}
-*/
 
 .about__main-btn {
   min-width: 176px;

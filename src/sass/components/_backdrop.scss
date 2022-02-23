@@ -10,18 +10,12 @@
   overflow-y: scroll;
 
   background-color: rgba(79, 20, 34, 0.3);
-  transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+  transition: opacity 250ms var(--timingFunction), visibility 250ms var(--timingFunction);
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-
-// .is-hidden {
-//   opacity: 0;
-//   visibility: hidden;
-//   pointer-events: none;
-// }
 
 .backdrop.is-open {
   opacity: 1;
