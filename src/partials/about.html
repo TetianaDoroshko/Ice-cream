@@ -4,9 +4,31 @@
     <h2 class="about__title section-title">how it’s made?</h2>
     <div class="about__wrapper">
       <picture class="about__image">
-        <source srcset="./images/about/about-img.png 1x, ./images/about/about-img@2x.png 2x" />
-        <img src="./images/about/about-img.png" alt="" />
+        <source
+          srcset="./images/about/about-img.webp 1x, ./images/about/about-img@2x.webp 2x"
+          media="(min-width: 1280px)"
+          type="image/webp"
+        />
+        <source
+          srcset="./images/about/about-img.png 1x, ./images/about/about-img@2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+
+        <source
+          srcset="
+            ./images/about/about-img-mobile.webp    1x,
+            ./images/about/about-img-mobile@2x.webp 2x
+          "
+          media="(max-width: 1279px)"
+          type="image/webp"
+        />
+        <source
+          srcset="./images/about/about-img-mobile.png 1x, ./images/about/about-img-mobile@2x.png 2x"
+          media="(max-width: 1279px)"
+        />
+        <img src="#" alt="Cow" />
       </picture>
+
       <div class="about__content--paragraf">
         <p class="about__text-start">
           Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
