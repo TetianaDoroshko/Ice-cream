@@ -6,8 +6,8 @@
   );
 }
 .gallery__grid {
-  margin: 0 auto;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(7, 1fr);
   gap: 2px;
 
@@ -41,10 +41,10 @@
     transform: scale(1);
   }
 }
-.gallery__grid:hover .gallery__item{
+.gallery__grid:hover .gallery__item {
   filter: blur(2px) opacity(0.8);
 }
-.gallery__grid:hover .gallery__item:hover{
+.gallery__grid:hover .gallery__item:hover {
   filter: none;
 }
 

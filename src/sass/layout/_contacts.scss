@@ -1,11 +1,9 @@
 .contacts {
   background: #fff5f6;
-  //padding-top: 86px;
   padding-bottom: 63px;
   background: linear-gradient(180deg, rgb(255, 255, 255) 93px, rgb(255, 245, 246) 2%);
 
   @include tablet {
-    //padding-top: 132px;
     padding-bottom: 108px;
     background: linear-gradient(180deg, rgb(255, 255, 255) 93px, rgb(255, 245, 246) 2%);
   }
@@ -95,24 +93,25 @@
 }
 
 .contacts__title {
-  // width: 80px;
+  display: inline-block;
   height: 16px;
   padding: 0 24px;
-  text-transform: uppercase;
-  display: inline-block;
+  margin-bottom: 25px;
+  border-radius: 4px;
+
   @include font(12px, 16px, 500, 0.04em);
+  text-transform: uppercase;
   text-align: center;
   color: #ffffff;
   background: #f0d1a5;
-  border-radius: 4px;
-  margin-bottom: 25px;
+
   @include tablet {
-    // width: 73px;
-    border-radius: 6px;
     height: 28px;
     padding: 0 16px;
-    @include font(16px, 30px);
+    border-radius: 6px;
     margin-bottom: 30px;
+
+    @include font(16px, 30px);
   }
   @include desktop {
     margin-bottom: 32px;
@@ -121,10 +120,6 @@
 
 .contacts__color-title {
   background: #c2e297;
-  // width: 130px;
-  @include tablet {
-    // width: 138px;
-  }
 }
 
 .contacts__location {
@@ -141,9 +136,10 @@
 }
 
 .contacts__text {
+  margin-bottom: 25px;
+
   @include font(12px, 18px, 500, null);
   color: #907e82;
-  margin-bottom: 25px;
   @include tablet {
     @include font(14px, 23px, null, null);
     margin-bottom: 30px;
