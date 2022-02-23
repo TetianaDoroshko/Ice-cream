@@ -210,6 +210,11 @@
   & ~ .hero__about {
     display: block;
   }
+
+  & ~ .hero__btn-arrow:hover,
+  & ~ .hero__btn-arrow:focus {
+    transform: scale(1.1) rotate(90deg);
+  }
 }
 
 .hero__btn-arrow {
