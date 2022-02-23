@@ -10,7 +10,7 @@ if (modalBtns.length > 0) {
   for (let index = 0; index < modalBtns.length; index++) {
     const modalBtn = modalBtns[index];
     modalBtn.addEventListener('click', function (e) {
-      const modalName = modalBtn.getAttribute('data');
+      const modalName = modalBtn.getAttribute('data-modal');
       const curentModal = document.getElementById(modalName);
       modalOpen(curentModal);
     });
