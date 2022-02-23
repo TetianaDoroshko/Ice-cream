@@ -4,7 +4,7 @@ const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;
 
-const timeout = 0;
+const timeout = 250;
 
 if (modalBtns.length > 0) {
   for (let index = 0; index < modalBtns.length; index++) {
