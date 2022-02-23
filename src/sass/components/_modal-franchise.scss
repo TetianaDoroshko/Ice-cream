@@ -13,7 +13,7 @@
 .modal-franchise__title {
   margin-bottom: 20px;
 
-  @include font($fs: 24px, $lh: 30px, $fw: null, $ls: 0.04em);
+  @include font($fs: 24px, $lh: 30px, $fw: 400, $ls: 0.04em);
   font-family: var(--secondaryFontFamily);
   color: var(--secondaryBrandColor);
   text-transform: uppercase;
