@@ -53,13 +53,13 @@
 }
 
 .advantages-list__text--accent {
-  @include font(36px, 41px, 400, 0.04em);
   display: block;
   margin-bottom: 19px;
-  font-family: var(--secondaryFontFamily);
-  text-transform: uppercase;
 
+  font-family: var(--secondaryFontFamily);
   color: var(--primaryBrandColor);
+  @include font(36px, 41px, 400, 0.04em);
+  text-transform: uppercase;
 
   @include tablet {
     margin-bottom: 13px;
@@ -73,8 +73,8 @@
 }
 
 .advantages-list__text {
-  @include font(12px, 20px, 700);
   color: var(--primaryTextDark);
+  @include font(12px, 20px, 700);
 
   @include tablet {
     @include font(14px, 24px);
@@ -93,19 +93,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   animation: pulse 1500ms linear infinite alternate;
-  // transform: scale(1);
-  // transition: transform 250ms var(--timingFunction);
-  // @keyframes pulse {
-  //   0% {
-  //     transform: scale3d(1, 1, 1);
-  //   }
-  //   50% {
-  //     transform: scale3d(1.1, 1.1, 1.1);
-  //   }
-  //   100% {
-  //     transform: scale3d(1, 1, 1);
-  //   }
-  // }
 
   @keyframes pulse {
     0% {
@@ -118,15 +105,6 @@
       transform: scale3d(1);
     }
   }
-  // @keyframes pulse {
-  //   0% {
-  //     transform: rotateZ(-10deg);
-  //   }
-
-  //   100% {
-  //     transform: rotateZ(10deg);
-  //   }
-  // }
 
   @include tablet {
     margin-bottom: 36px;
@@ -149,13 +127,3 @@
   width: 44px;
   background-image: url(../images/advantages/advantages3.svg);
 }
-
-// .advantages-list__item:hover::before,
-// .advantages-list__item:focus::before {
-//   transform: scale(1.5);
-// }
-
-// .advantages-list__item:hover::before,
-// .advantages-list__item:focus::before {
-//   animation: none;
-// }

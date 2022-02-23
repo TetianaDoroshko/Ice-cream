@@ -1,5 +1,4 @@
 <div class="backdrop" id="modal-header">
-  <!-- <div class="backdrop is-hidden"> -->
   <div class="modal modal-header">
     <button class="modal__close-btn js-modal-close" type="button">
       <svg class="modal__close-icon" width="30" height="30">
@@ -9,11 +8,10 @@
     <form class="modal-header__form">
       <p class="modal-header__title">Make your order</p>
 
-      <div class="modal-header__radio">
+      <div role="group" class="modal-header__radio">
         <label class="modal-header__product">
           <input type="radio" name="product-name" class="modal-input-radio visually-hidden" />
           <span class="header-radio__check"></span>
-          <!-- <img src="./images/ice-cream-1.png" alt="" width="14" height="14" /> -->
           <svg class="modal-header__product-icon">
             <use href="./images/sprite.svg#icecream"></use>
           </svg>
@@ -22,7 +20,6 @@
         <label class="modal-header__product">
           <input type="radio" name="product-name" class="modal-input-radio visually-hidden" />
           <span class="header-radio__check"></span>
-          <!-- <img src="./images/ice-coffee-1.png" alt="" width="14" height="14" /> -->
           <svg class="modal-header__product-icon">
             <use href="./images/sprite.svg#iced-coffee"></use>
           </svg>
@@ -31,7 +28,6 @@
         <label class="modal-header__product">
           <input type="radio" name="product-name" class="modal-input-radio visually-hidden" />
           <span class="header-radio__check"></span>
-          <!-- <img src="./images/milkshake-1.png" alt="" width="14" height="14" /> -->
           <svg class="modal-header__product-icon">
             <use href="./images/sprite.svg#milkshake"></use>
           </svg>
@@ -45,7 +41,8 @@
           ><input
             type="text"
             class="modal-header__input"
-            title="Введите имя латиницей или кириллицей"
+            placeholder="Chuck Norris"
+            title="Type your name in English or Cyrillic"
             placeholder=""
             required
             minlength="2"
@@ -64,7 +61,8 @@
           ><input
             type="tel"
             class="modal-header__input"
-            title="Введите Ваш телефон в формате 063-111-11-11"
+            placeholder="063-111-11-11"
+            title="Type your phone following the next rule 063-111-11-11"
             placeholder=""
             required
             name="user-phone"
@@ -82,7 +80,8 @@
           ><input
             type="email"
             class="modal-header__input"
-            title="Введите адрес электронной почты"
+            placeholder="exemple@gmail.com"
+            title="Type your e-mail address"
             required
             name="user-email"
           />
